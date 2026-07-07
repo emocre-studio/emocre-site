@@ -468,6 +468,24 @@
 		"artPath": "creature/creatures/distraction/distraction-2-art-front.png"
 	},
 	{
+		"number": 41,
+		"name": "Afrô",
+		"description": "Dorme fechada sobre águas calmas. Abre-se apenas para quem chega amigavelmente, e devolve em perfume o afeto que recebe.",
+		"type1Pt": "Alegria",
+		"type2Pt": "Confiança",
+		"type1": "AL",
+		"type2": "CO",
+		"emotion": "love",
+		"emotionPt": "Amor",
+		"stage": "1",
+		"energy": 42.105263157895,
+		"attack": 52.631578947368,
+		"defense": 45.112781954887,
+		"speed": 60.15037593985,
+		"complexTypeName": "Amor",
+		"artPath": "creature/creatures/love/love-1-art-front.png"
+	},
+	{
 		"number": 45,
 		"name": "Mascarim",
 		"description": "Esconde o rosto atrás de uma máscara que raramente remove. Tenta agir da forma certa, mesmo que isso o incomode por dentro.",
