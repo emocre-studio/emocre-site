@@ -20,42 +20,33 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
   <style>
     .mythical-showcase-container {
       width: 100%;
-      max-width: 320px;
-      margin: 1.5rem auto;
+      max-width: 384px; /* max-w-sm em React */
+      margin: 2rem auto;
       position: relative;
       z-index: 10;
     }
 
     .mythical-showcase-card {
-      background: rgba(255, 255, 255, 0.95);
-      border: 2px solid rgba(234, 179, 8, 0.5);
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 8px 32px rgba(234, 179, 8, 0.15), 0 4px 12px rgba(80, 140, 80, 0.06);
-      text-align: center;
+      background: linear-gradient(135deg, rgba(234, 179, 8, 0.05) 0%, rgba(245, 158, 11, 0.1) 100%), var(--surface);
+      border: 1px solid rgba(234, 179, 8, 0.5); /* border-yellow-500/50 */
+      border-radius: 12px; /* rounded-lg */
+      padding: 1.25rem; /* p-5 */
+      box-shadow: 0 8px 32px rgba(234, 179, 8, 0.12); /* shadow-mythic */
       position: relative;
       overflow: hidden;
-      transition: transform 0.2s, box-shadow 0.2s;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .mythical-showcase-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 40px rgba(234, 179, 8, 0.25), 0 6px 16px rgba(80, 140, 80, 0.1);
+      transform: scale(1.02);
     }
 
-    /* Dark theme compatibility */
-    @media (prefers-color-scheme: dark) {
-      .mythical-showcase-card {
-        background: rgba(20, 34, 20, 0.95);
-        border-color: rgba(234, 179, 8, 0.4);
-        box-shadow: 0 8px 32px rgba(234, 179, 8, 0.1), 0 4px 12px rgba(0, 0, 0, 0.2);
-      }
-    }
-
-    /* Check if body has dark class or dark theme active */
-    body.dark .mythical-showcase-card {
-      background: rgba(20, 34, 20, 0.95);
-      border-color: rgba(234, 179, 8, 0.4);
+    .mythical-sparkles {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      color: #eab308; /* text-yellow-500 */
     }
 
     .mythical-showcase-header {
@@ -63,13 +54,19 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
       align-items: center;
       justify-content: center;
       gap: 0.5rem;
-      color: #cca000;
+      color: #ca8a04; /* text-yellow-600 */
       font-family: var(--font-game);
-      font-size: 10px;
-      letter-spacing: 1.5px;
+      font-size: 12px; /* text-xs */
+      letter-spacing: 0.1em; /* tracking-widest */
       text-transform: uppercase;
       margin-bottom: 1rem;
       font-weight: bold;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .mythical-showcase-header {
+        color: #facc15; /* text-yellow-400 */
+      }
     }
 
     .sparkle-icon {
@@ -79,45 +76,75 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
     }
 
     .mythical-creature-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .mythical-info-left {
+      display: flex;
+      flex-direction: column;
     }
 
     .mythical-tag {
       font-family: var(--font-game);
-      font-size: 9px;
-      letter-spacing: 1px;
-      color: var(--muted);
+      font-size: 10px; /* text-[10px] */
+      letter-spacing: 0.05em; /* tracking-wider */
+      color: var(--muted); /* text-muted-foreground */
       text-transform: uppercase;
       display: block;
-      margin-bottom: 0.25rem;
+      margin-bottom: 2px;
     }
 
     .mythical-name {
       font-family: var(--font-game);
-      font-size: 20px;
-      color: var(--text);
-      letter-spacing: 1px;
+      font-size: 18px; /* text-lg */
+      color: var(--text); /* text-foreground */
+      letter-spacing: 0.025em; /* tracking-wide */
       margin: 0;
-      line-height: 1.2;
+      line-height: 1.25;
     }
 
     .mythical-emotion {
       font-family: var(--font-game);
-      font-size: 9px;
-      letter-spacing: 1px;
-      color: #d4af37;
+      font-size: 9px; /* text-[9px] */
+      letter-spacing: 0.05em; /* tracking-wider */
+      color: #ca8a04; /* text-yellow-600 */
       text-transform: uppercase;
       display: block;
-      margin-top: 0.25rem;
+      margin-top: 4px;
       font-weight: bold;
     }
 
+    @media (prefers-color-scheme: dark) {
+      .mythical-emotion {
+        color: #facc15; /* text-yellow-400 */
+      }
+    }
+
+    .mythical-info-right {
+      text-align: right;
+    }
+
+    .mythical-lvl-badge {
+      font-family: var(--font-game);
+      font-size: 10px; /* text-[10px] */
+      color: var(--green); /* text-primary */
+      background: var(--bg2); /* bg-secondary */
+      padding: 2px 8px; /* px-2 py-0.5 */
+      border-radius: 4px; /* rounded */
+      border: 1px solid rgba(78, 143, 78, 0.1); /* border-primary/10 */
+      display: inline-block;
+    }
+
     .mythical-creature-img-wrap {
-      background: linear-gradient(135deg, rgba(249, 115, 22, 0.12) 0%, rgba(234, 179, 8, 0.08) 100%);
+      background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(234, 179, 8, 0.1) 100%);
       border: 1px solid rgba(249, 115, 22, 0.3);
       border-radius: 8px;
       padding: 1rem;
-      height: 180px;
+      height: 192px; /* max-h-48 (192px) */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -126,17 +153,10 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
       margin-bottom: 1rem;
     }
 
-    @media (prefers-color-scheme: dark) {
-      .mythical-creature-img-wrap {
-        background: linear-gradient(135deg, rgba(249, 115, 22, 0.2) 0%, rgba(234, 179, 8, 0.1) 100%);
-        border-color: rgba(249, 115, 22, 0.4);
-      }
-    }
-
     .mythical-glow {
       position: absolute;
       inset: 0;
-      background: radial-gradient(circle, rgba(234, 179, 8, 0.15) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(234, 179, 8, 0.25) 0%, transparent 70%);
       animation: pulse 3s infinite ease-in-out;
     }
 
@@ -156,9 +176,9 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
     }
 
     .mythical-desc {
-      font-size: 11px;
-      line-height: 1.5;
-      color: var(--muted);
+      font-size: 12px; /* text-xs */
+      line-height: 1.6; /* leading-relaxed */
+      color: var(--muted); /* text-muted-foreground */
       margin: 0;
       text-align: center;
     }
@@ -171,20 +191,25 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
 
   <div class="mythical-showcase-container">
     <div class="mythical-showcase-card">
-      <div class="mythical-showcase-header">
-        <svg class="sparkle-icon" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2l2.4 4.9 5.3.8-3.8 3.7.9 5.3-4.8-2.5-4.8 2.5.9-5.3-3.8-3.7 5.3-.8z"/>
-        </svg>
-        <span>Evento Mythic Creatures</span>
+      <div class="mythical-sparkles">
         <svg class="sparkle-icon" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2l2.4 4.9 5.3.8-3.8 3.7.9 5.3-4.8-2.5-4.8 2.5.9-5.3-3.8-3.7 5.3-.8z"/>
         </svg>
       </div>
 
+      <div class="mythical-showcase-header">
+        <span>Evento Mythic Creatures</span>
+      </div>
+
       <div class="mythical-creature-info">
-        <span class="mythical-tag">CRIATURA MÍTICA</span>
-        <h3 class="mythical-name">Saudalos</h3>
-        <span class="mythical-emotion">SAUDADE</span>
+        <div class="mythical-info-left">
+          <span class="mythical-tag">CRIATURA MÍTICA</span>
+          <h3 class="mythical-name">Saudalos</h3>
+          <span class="mythical-emotion">SAUDADE</span>
+        </div>
+        <div class="mythical-info-right">
+          <span class="mythical-lvl-badge">LVL 30</span>
+        </div>
       </div>
 
       <div class="mythical-creature-img-wrap">
