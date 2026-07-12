@@ -16,12 +16,33 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
   <p class="hero-tagline">Dentro da sua mente, as emoções tomaram forma.</p>
   <p class="hero-desc">Um jogo de plataforma e batalhas por turnos para Mega Drive e PC. Enfrente criaturas feitas de sentimentos e integre-as.</p>
 
-  <!-- ── SAUDALOS SHOWCASE CARD ── -->
+  <div class="hero-buttons">
+    <a href="#demo" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('demo').offsetTop - 60, behavior: 'smooth'})" class="btn btn-primary btn-lg">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      Jogar a Demo
+    </a>
+    <a href="https://store.steampowered.com/app/3848350/Emocre" target="_blank" class="btn btn-steam" onclick="trackEvent('wishlist_click', { location: 'hero' })">
+      <svg viewBox="0 0 64 64" fill="currentColor"><path d="M0.028 29.874C1.125 13.193 15.017 0 31.993 0c17.693 0 32.035 14.327 32.035 32C64.028 49.673 49.686 64 31.993 64c-14.437 0-26.646-9.549-30.647-22.665L13.472 46.333c.601 2.728 2.483 5.12 5.248 6.27 4.53 1.88 9.728-.26 11.616-4.782.483-1.157.716-2.403.684-3.656L42.225 36.16l.276.005C49.213 36.165 54.669 30.699 54.669 23.985c0-6.714-5.446-12.16-12.168-12.174C35.792 11.811 30.333 17.271 30.333 23.985l.01.0.003.158L22.507 35.518c-1.269-.058-2.543.165-3.752.662-.526.214-1.029.482-1.499.8L.042 29.893c0 0 0 .001 0 .004C.037 29.889.033 29.882.028 29.874zm28.433 17.161c-1.456 3.5-5.472 5.147-8.963 3.694-1.549-.65-2.805-1.847-3.528-3.362l3.961 1.64c2.574 1.07 5.528-.147 6.599-2.719 1.072-2.573-.145-5.527-2.718-6.601l-4.105-1.695c1.58-.6 3.376-.62 5.056.077 1.702.703 3.003 2.027 3.7 3.72.696 1.693.692 3.56-.01 5.246h.008zM42.512 32.1c-4.478-.012-8.103-3.64-8.107-8.113.005-4.472 3.63-8.099 8.107-8.111 4.478.011 8.104 3.638 8.109 8.111-.004 4.474-3.63 8.102-8.109 8.113zm-6.076-8.126c-.002 3.361 2.723 6.088 6.088 6.093 3.365-.003 6.092-2.731 6.09-6.093 0-3.365-2.732-6.095-6.09-6.095-3.365.006-6.09 2.734-6.087 6.095h-.001z"/></svg>
+      Wishlist na Steam
+    </a>
+    <a href="https://instagram.com/emocregame" target="_blank" class="btn btn-instagram" onclick="trackEvent('social_click', { network: 'instagram', location: 'hero' })">
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
+      Instagram
+    </a>
+  </div>
+</section>
+
+<!-- ── MYTHICAL CREATURE SECTION ── -->
+<section class="mythical-section" id="mythical">
   <style>
+    .mythical-section {
+      background: var(--bg);
+    }
+
     .mythical-showcase-container {
       width: 100%;
       max-width: 384px; /* max-w-sm em React */
-      margin: 2rem auto;
+      margin: 0 auto;
       position: relative;
       z-index: 10;
     }
@@ -189,62 +210,49 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
     }
   </style>
 
-  <div class="mythical-showcase-container">
-    <div class="mythical-showcase-card">
-      <div class="mythical-sparkles">
-        <svg class="sparkle-icon" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2l2.4 4.9 5.3.8-3.8 3.7.9 5.3-4.8-2.5-4.8 2.5.9-5.3-3.8-3.7 5.3-.8z"/>
-        </svg>
-      </div>
-
-      <div class="mythical-showcase-header">
-        <span>Evento Mythic Creatures</span>
-      </div>
-
-      <div class="mythical-creature-info">
-        <div class="mythical-info-left">
-          <span class="mythical-tag">CRIATURA MÍTICA</span>
-          <h3 class="mythical-name">Saudalos</h3>
-          <span class="mythical-emotion">SAUDADE</span>
+  <div class="section-inner">
+    <div class="mythical-showcase-container">
+      <div class="mythical-showcase-card">
+        <div class="mythical-sparkles">
+          <svg class="sparkle-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l2.4 4.9 5.3.8-3.8 3.7.9 5.3-4.8-2.5-4.8 2.5.9-5.3-3.8-3.7 5.3-.8z"/>
+          </svg>
         </div>
-        <div class="mythical-info-right">
-          <span class="mythical-lvl-badge">LVL 30</span>
+
+        <div class="mythical-showcase-header">
+          <span>Evento Mythic Creatures</span>
         </div>
-      </div>
 
-      <div class="mythical-creature-img-wrap">
-        <div class="mythical-glow"></div>
-        <img
-          src="/assets/creatures/longing-1-art-front-crt.gif"
-          alt="Saudalos"
-          class="mythical-img"
-        />
-      </div>
+        <div class="mythical-creature-info">
+          <div class="mythical-info-left">
+            <span class="mythical-tag">CRIATURA MÍTICA</span>
+            <h3 class="mythical-name">Saudalos</h3>
+            <span class="mythical-emotion">SAUDADE</span>
+          </div>
+          <div class="mythical-info-right">
+            <span class="mythical-lvl-badge">LVL 30</span>
+          </div>
+        </div>
 
-      <div class="mythical-types">
-        <span class="type-badge type-AL">Alegria</span>
-        <span class="type-badge type-TR">Tristeza</span>
-      </div>
+        <div class="mythical-creature-img-wrap">
+          <div class="mythical-glow"></div>
+          <img
+            src="/assets/creatures/longing-1-art-front-crt.gif"
+            alt="Saudalos"
+            class="mythical-img"
+          />
+        </div>
 
-      <p class="mythical-desc">
-        Vagaroso pelas profundezas, seus olhos projetam uma luz trêmula que ilumina coisas que não existem mais.
-      </p>
+        <div class="mythical-types">
+          <span class="type-badge type-AL">Alegria</span>
+          <span class="type-badge type-TR">Tristeza</span>
+        </div>
+
+        <p class="mythical-desc">
+          Vagaroso pelas profundezas, seus olhos projetam uma luz trêmula que ilumina coisas que não existem mais.
+        </p>
+      </div>
     </div>
-  </div>
-
-  <div class="hero-buttons">
-    <a href="#demo" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('demo').offsetTop - 60, behavior: 'smooth'})" class="btn btn-primary btn-lg">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-      Jogar a Demo
-    </a>
-    <a href="https://store.steampowered.com/app/3848350/Emocre" target="_blank" class="btn btn-steam" onclick="trackEvent('wishlist_click', { location: 'hero' })">
-      <svg viewBox="0 0 64 64" fill="currentColor"><path d="M0.028 29.874C1.125 13.193 15.017 0 31.993 0c17.693 0 32.035 14.327 32.035 32C64.028 49.673 49.686 64 31.993 64c-14.437 0-26.646-9.549-30.647-22.665L13.472 46.333c.601 2.728 2.483 5.12 5.248 6.27 4.53 1.88 9.728-.26 11.616-4.782.483-1.157.716-2.403.684-3.656L42.225 36.16l.276.005C49.213 36.165 54.669 30.699 54.669 23.985c0-6.714-5.446-12.16-12.168-12.174C35.792 11.811 30.333 17.271 30.333 23.985l.01.0.003.158L22.507 35.518c-1.269-.058-2.543.165-3.752.662-.526.214-1.029.482-1.499.8L.042 29.893c0 0 0 .001 0 .004C.037 29.889.033 29.882.028 29.874zm28.433 17.161c-1.456 3.5-5.472 5.147-8.963 3.694-1.549-.65-2.805-1.847-3.528-3.362l3.961 1.64c2.574 1.07 5.528-.147 6.599-2.719 1.072-2.573-.145-5.527-2.718-6.601l-4.105-1.695c1.58-.6 3.376-.62 5.056.077 1.702.703 3.003 2.027 3.7 3.72.696 1.693.692 3.56-.01 5.246h.008zM42.512 32.1c-4.478-.012-8.103-3.64-8.107-8.113.005-4.472 3.63-8.099 8.107-8.111 4.478.011 8.104 3.638 8.109 8.111-.004 4.474-3.63 8.102-8.109 8.113zm-6.076-8.126c-.002 3.361 2.723 6.088 6.088 6.093 3.365-.003 6.092-2.731 6.09-6.093 0-3.365-2.732-6.095-6.09-6.095-3.365.006-6.09 2.734-6.087 6.095h-.001z"/></svg>
-      Wishlist na Steam
-    </a>
-    <a href="https://instagram.com/emocregame" target="_blank" class="btn btn-instagram" onclick="trackEvent('social_click', { network: 'instagram', location: 'hero' })">
-      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
-      Instagram
-    </a>
   </div>
 </section>
 
