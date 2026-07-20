@@ -92,6 +92,28 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
       font-weight: bold;
     }
 
+    .mythical-event-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #000;
+      border-radius: 4px;
+      padding: 3px 7px;
+    }
+
+    .mythical-event-badge-text {
+      color: #fff;
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .mythical-event-logo {
+      display: block;
+      height: 13px;
+      width: auto;
+    }
+
     /* info row */
     .mythical-creature-info {
       display: flex;
@@ -196,6 +218,27 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
       text-align: center;
     }
 
+    .mythical-cta {
+      margin: 1rem -1.25rem -1.25rem;
+      padding: 0.85rem 1rem;
+      background: linear-gradient(135deg, #eab308 0%, #f59e0b 100%);
+      border-radius: 0;
+      color: #1a1a1a;
+      font-family: var(--font-game);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+      text-align: center;
+      line-height: 1.4;
+      box-shadow: 0 -4px 16px rgba(234, 179, 8, 0.35);
+      animation: ctaPulse 2.4s infinite ease-in-out;
+    }
+
+    @keyframes ctaPulse {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 1; }
+    }
+
     @keyframes pulse {
       0%, 100% { opacity: 0.7; transform: scale(1); }
       50% { opacity: 1; transform: scale(1.05); }
@@ -223,7 +266,8 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
           "img  header"
           "img  info"
           "img  types"
-          "img  desc";
+          "img  desc"
+          "cta  cta";
         column-gap: 2.5rem;
         row-gap: 0.75rem;
         align-items: start;
@@ -281,6 +325,12 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
         font-size: 13px;
         text-align: left;
       }
+
+      .mythical-cta {
+        grid-area: cta;
+        margin: 0.75rem -3rem -2.5rem;
+        border-radius: 0 0 20px 20px;
+      }
     }
   </style>
 
@@ -295,7 +345,11 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
         </div>
 
         <div class="mythical-showcase-header">
-          <span>Evento Mythic Creatures</span>
+          <span>Evento: Criatura Mítica</span>
+          <span class="mythical-event-badge">
+            <span class="mythical-event-badge-text">Exclusivo</span>
+            <img src="/assets/retrocon-logo.png" alt="Retrocon" class="mythical-event-logo" />
+          </span>
         </div>
 
         <div class="mythical-creature-info">
@@ -305,7 +359,7 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
             <span class="mythical-emotion">SAUDADE</span>
           </div>
           <div class="mythical-info-right">
-            <span class="mythical-lvl-badge">Nível 30</span>
+            <span class="mythical-lvl-badge">Nível 5</span>
           </div>
         </div>
 
@@ -326,6 +380,10 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
         <p class="mythical-desc">
           Vagaroso pelas profundezas, seus olhos projetam uma luz trêmula que ilumina coisas que não existem mais.
         </p>
+
+        <div class="mythical-cta">
+          Jogue em nosso estande para obter esse Emocre
+        </div>
 
       </div>
     </div>
