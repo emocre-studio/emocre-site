@@ -16,222 +16,6 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
   <p class="hero-tagline">Dentro da sua mente, as emoções tomaram forma.</p>
   <p class="hero-desc">Um jogo de plataforma e batalhas por turnos para Mega Drive e PC. Enfrente criaturas feitas de sentimentos e integre-as.</p>
 
-  <!-- ── SAUDALOS SHOWCASE CARD ── -->
-<!--   <style>
-    .mythical-showcase-container {
-      width: 100%;
-      max-width: 384px; /* max-w-sm em React */
-      margin: 2rem auto;
-      position: relative;
-      z-index: 10;
-    }
-
-    .mythical-showcase-card {
-      background: linear-gradient(135deg, rgba(234, 179, 8, 0.05) 0%, rgba(245, 158, 11, 0.1) 100%), var(--surface);
-      border: 1px solid rgba(234, 179, 8, 0.5); /* border-yellow-500/50 */
-      border-radius: 12px; /* rounded-lg */
-      padding: 1.25rem; /* p-5 */
-      box-shadow: 0 8px 32px rgba(234, 179, 8, 0.12); /* shadow-mythic */
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .mythical-showcase-card:hover {
-      transform: scale(1.02);
-    }
-
-    .mythical-sparkles {
-      position: absolute;
-      top: 0;
-      right: 0;
-      padding: 0.5rem;
-      color: #eab308; /* text-yellow-500 */
-    }
-
-    .mythical-showcase-header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.5rem;
-      color: #ca8a04; /* text-yellow-600 */
-      font-family: var(--font-game);
-      font-size: 12px; /* text-xs */
-      letter-spacing: 0.1em; /* tracking-widest */
-      text-transform: uppercase;
-      margin-bottom: 1rem;
-      font-weight: bold;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .mythical-showcase-header {
-        color: #facc15; /* text-yellow-400 */
-      }
-    }
-
-    .sparkle-icon {
-      width: 14px;
-      height: 14px;
-      animation: pulse 2s infinite ease-in-out;
-    }
-
-    .mythical-creature-info {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 1rem;
-      text-align: left;
-    }
-
-    .mythical-info-left {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .mythical-tag {
-      font-family: var(--font-game);
-      font-size: 10px; /* text-[10px] */
-      letter-spacing: 0.05em; /* tracking-wider */
-      color: var(--muted); /* text-muted-foreground */
-      text-transform: uppercase;
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .mythical-name {
-      font-family: var(--font-game);
-      font-size: 18px; /* text-lg */
-      color: var(--text); /* text-foreground */
-      letter-spacing: 0.025em; /* tracking-wide */
-      margin: 0;
-      line-height: 1.25;
-    }
-
-    .mythical-emotion {
-      font-family: var(--font-game);
-      font-size: 9px; /* text-[9px] */
-      letter-spacing: 0.05em; /* tracking-wider */
-      color: #ca8a04; /* text-yellow-600 */
-      text-transform: uppercase;
-      display: block;
-      margin-top: 4px;
-      font-weight: bold;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .mythical-emotion {
-        color: #facc15; /* text-yellow-400 */
-      }
-    }
-
-    .mythical-info-right {
-      text-align: right;
-    }
-
-    .mythical-lvl-badge {
-      font-family: var(--font-game);
-      font-size: 10px; /* text-[10px] */
-      color: var(--green); /* text-primary */
-      background: var(--bg2); /* bg-secondary */
-      padding: 2px 8px; /* px-2 py-0.5 */
-      border-radius: 4px; /* rounded */
-      border: 1px solid rgba(78, 143, 78, 0.1); /* border-primary/10 */
-      display: inline-block;
-    }
-
-    .mythical-creature-img-wrap {
-      background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(234, 179, 8, 0.1) 100%);
-      border: 1px solid rgba(249, 115, 22, 0.3);
-      border-radius: 8px;
-      padding: 1rem;
-      height: 192px; /* max-h-48 (192px) */
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-      margin-bottom: 1rem;
-    }
-
-    .mythical-glow {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle, rgba(234, 179, 8, 0.25) 0%, transparent 70%);
-      animation: pulse 3s infinite ease-in-out;
-    }
-
-    .mythical-img {
-      height: 100%;
-      object-fit: contain;
-      image-rendering: pixelated;
-      position: relative;
-      z-index: 1;
-    }
-
-    .mythical-types {
-      display: flex;
-      justify-content: center;
-      gap: 0.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .mythical-desc {
-      font-size: 12px; /* text-xs */
-      line-height: 1.6; /* leading-relaxed */
-      color: var(--muted); /* text-muted-foreground */
-      margin: 0;
-      text-align: center;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 0.7; transform: scale(1); }
-      50% { opacity: 1; transform: scale(1.05); }
-    }
-  </style>
-
-  <div class="mythical-showcase-container">
-    <div class="mythical-showcase-card">
-      <div class="mythical-sparkles">
-        <svg class="sparkle-icon" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M12 2l2.4 4.9 5.3.8-3.8 3.7.9 5.3-4.8-2.5-4.8 2.5.9-5.3-3.8-3.7 5.3-.8z"/>
-        </svg>
-      </div>
-
-      <div class="mythical-showcase-header">
-        <span>Evento Mythic Creatures</span>
-      </div>
-
-      <div class="mythical-creature-info">
-        <div class="mythical-info-left">
-          <span class="mythical-tag">CRIATURA MÍTICA</span>
-          <h3 class="mythical-name">Saudalos</h3>
-          <span class="mythical-emotion">SAUDADE</span>
-        </div>
-        <div class="mythical-info-right">
-          <span class="mythical-lvl-badge">LVL 30</span>
-        </div>
-      </div>
-
-      <div class="mythical-creature-img-wrap">
-        <div class="mythical-glow"></div>
-        <img
-          src="/assets/creatures/longing-1-art-front-crt.gif"
-          alt="Saudalos"
-          class="mythical-img"
-        />
-      </div>
-
-      <div class="mythical-types">
-        <span class="type-badge type-AL">Alegria</span>
-        <span class="type-badge type-TR">Tristeza</span>
-      </div>
-
-      <p class="mythical-desc">
-        Vagaroso pelas profundezas, seus olhos projetam uma luz trêmula que ilumina coisas que não existem mais.
-      </p>
-    </div>
-  </div>
- -->
   <div class="hero-buttons">
     <a href="#demo" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('demo').offsetTop - 60, behavior: 'smooth'})" class="btn btn-primary btn-lg">
       <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
@@ -245,6 +29,364 @@ description: "Emocre é um jogo de plataforma e batalhas por turnos onde você i
       <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
       Instagram
     </a>
+  </div>
+</section>
+
+<!-- ── MYTHICAL CREATURE SECTION ── -->
+<section class="mythical-section" id="mythical">
+  <style>
+    .mythical-section {
+      background: var(--bg);
+    }
+
+    .mythical-showcase-container {
+      width: 100%;
+      max-width: 384px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    .mythical-showcase-card {
+      background: linear-gradient(135deg, rgba(234, 179, 8, 0.05) 0%, rgba(245, 158, 11, 0.1) 100%), var(--surface);
+      border: 1px solid rgba(234, 179, 8, 0.5);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 8px 32px rgba(234, 179, 8, 0.12);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mythical-showcase-card:hover {
+      transform: scale(1.02);
+    }
+
+    /* sparkle */
+    .mythical-sparkles {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      color: #eab308;
+    }
+
+    .sparkle-icon {
+      width: 14px;
+      height: 14px;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    /* header */
+    .mythical-showcase-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: #ca8a04;
+      font-family: var(--font-game);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .mythical-event-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #000;
+      border-radius: 4px;
+      padding: 3px 7px;
+    }
+
+    .mythical-event-badge-text {
+      color: #fff;
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .mythical-event-logo {
+      display: block;
+      height: 13px;
+      width: auto;
+    }
+
+    /* info row */
+    .mythical-creature-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .mythical-info-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mythical-tag {
+      font-family: var(--font-game);
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .mythical-name {
+      font-family: var(--font-game);
+      font-size: 18px;
+      color: var(--text);
+      letter-spacing: 0.025em;
+      margin: 0;
+      line-height: 1.25;
+    }
+
+    .mythical-emotion {
+      font-family: var(--font-game);
+      font-size: 9px;
+      letter-spacing: 0.05em;
+      color: #ca8a04;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 4px;
+      font-weight: bold;
+    }
+
+    .mythical-info-right {
+      text-align: right;
+    }
+
+    .mythical-lvl-badge {
+      font-family: var(--font-game);
+      font-size: 10px;
+      color: var(--green);
+      background: var(--bg2);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(78, 143, 78, 0.1);
+      display: inline-block;
+    }
+
+    /* image */
+    .mythical-creature-img-wrap {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      height: 192px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .mythical-glow {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(234, 179, 8, 0.10) 0%, transparent 70%);
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    .mythical-img {
+      height: 100%;
+      object-fit: contain;
+      image-rendering: pixelated;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* types & desc */
+    .mythical-types {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .mythical-desc {
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0;
+      text-align: center;
+    }
+
+    .mythical-cta {
+      margin: 1rem -1.25rem -1.25rem;
+      padding: 0.85rem 1rem;
+      background: linear-gradient(135deg, #eab308 0%, #f59e0b 100%);
+      border-radius: 0;
+      color: #1a1a1a;
+      font-family: var(--font-game);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+      text-align: center;
+      line-height: 1.4;
+      box-shadow: 0 -4px 16px rgba(234, 179, 8, 0.35);
+      animation: ctaPulse 2.4s infinite ease-in-out;
+    }
+
+    @keyframes ctaPulse {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.7; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .mythical-showcase-header,
+      .mythical-emotion {
+        color: #facc15;
+      }
+      .mythical-creature-img-wrap {
+        background: rgba(26, 46, 26, 0.3);
+      }
+    }
+
+    @media (min-width: 640px) {
+      .mythical-showcase-container {
+        max-width: 1100px;
+      }
+
+      .mythical-showcase-card {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        grid-template-areas:
+          "img  header"
+          "img  info"
+          "img  types"
+          "img  desc"
+          "cta  cta";
+        column-gap: 2.5rem;
+        row-gap: 0.75rem;
+        align-items: start;
+        padding: 2.5rem 3rem;
+        border-radius: 20px;
+      }
+
+      .mythical-showcase-header {
+        grid-area: header;
+        justify-content: flex-start;
+        font-size: 13px;
+        margin-bottom: 0;
+      }
+
+      .mythical-creature-info {
+        grid-area: info;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 0;
+      }
+
+      .mythical-info-right {
+        text-align: left;
+      }
+
+      .mythical-name {
+        font-size: 34px;
+      }
+
+      .mythical-emotion {
+        font-size: 11px;
+      }
+
+      .mythical-tag {
+        font-size: 11px;
+      }
+
+      .mythical-creature-img-wrap {
+        grid-area: img;
+        height: 100%;
+        min-height: 220px;
+        margin-bottom: 0;
+        border-radius: 14px;
+        align-self: stretch;
+      }
+
+      .mythical-types {
+        grid-area: types;
+        justify-content: flex-start;
+        margin-bottom: 0;
+      }
+
+      .mythical-desc {
+        grid-area: desc;
+        font-size: 13px;
+        text-align: left;
+      }
+
+      .mythical-cta {
+        grid-area: cta;
+        margin: 0.75rem -3rem -2.5rem;
+        border-radius: 0 0 20px 20px;
+      }
+    }
+  </style>
+
+  <div class="section-inner">
+    <div class="mythical-showcase-container">
+      <div class="mythical-showcase-card">
+
+        <div class="mythical-sparkles">
+          <svg class="sparkle-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l2.4 4.9 5.3.8-3.8 3.7.9 5.3-4.8-2.5-4.8 2.5.9-5.3-3.8-3.7 5.3-.8z"/>
+          </svg>
+        </div>
+
+        <div class="mythical-showcase-header">
+          <span>Evento: Criatura Mítica</span>
+          <span class="mythical-event-badge">
+            <span class="mythical-event-badge-text">Exclusivo</span>
+            <img src="/assets/retrocon-logo.png" alt="Retrocon" class="mythical-event-logo" />
+          </span>
+        </div>
+
+        <div class="mythical-creature-info">
+          <div class="mythical-info-left">
+            <span class="mythical-tag">CRIATURA MÍTICA</span>
+            <h3 class="mythical-name">Saudalos</h3>
+            <span class="mythical-emotion">SAUDADE</span>
+          </div>
+          <div class="mythical-info-right">
+            <span class="mythical-lvl-badge">Nível 5</span>
+          </div>
+        </div>
+
+        <div class="mythical-creature-img-wrap">
+          <div class="mythical-glow"></div>
+          <img
+            src="/assets/creatures/longing-1-art-front-crt.gif"
+            alt="Saudalos"
+            class="mythical-img"
+          />
+        </div>
+
+        <div class="mythical-types">
+          <span class="type-badge type-AL">Alegria</span>
+          <span class="type-badge type-TR">Tristeza</span>
+        </div>
+
+        <p class="mythical-desc">
+          Vagaroso pelas profundezas, seus olhos projetam uma luz trêmula que ilumina coisas que não existem mais.
+        </p>
+
+        <div class="mythical-cta">
+          Jogue em nosso estande para obter esse Emocre
+        </div>
+
+      </div>
+    </div>
   </div>
 </section>
 
