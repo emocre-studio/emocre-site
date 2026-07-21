@@ -29,6 +29,9 @@
     "emotion": "SAUDADE",
     "level": "Nível 5",
     "desc": "Vagaroso pelas profundezas, seus olhos projetam uma luz trêmula que ilumina coisas que não existem mais.",
+    "descIntro": "Vagaroso pelas profundezas, seus olhos projetam uma luz trêmula que ilumina",
+    "descBold": "coisas que não existem mais",
+    "watermark": "MÍTICO",
     "cta": "Jogue em nosso estande para obter esse Emocre",
     "ctaLine1": "Jogue em nosso estande",
     "ctaLine2": "para obter esse Emocre"

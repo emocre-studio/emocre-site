@@ -1,13 +1,20 @@
 ---
-permalink: /saudalos/index.html
+pagination:
+  data: locales
+  size: 1
+  alias: locale
+permalink: "/{{ locale }}/saudalos/index.html"
+eleventyComputed:
+  pageTitle: "{{ i18n[locale].meta.saudalosTitle }}"
+  pageDescription: "{{ i18n[locale].meta.saudalosDescription }}"
 ---
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="{% if locale == 'en' %}en{% else %}pt-BR{% endif %}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=1920, initial-scale=1.0">
-  <title>Saudalos — Criatura Mítica | Emocre × Retrocon</title>
-  <meta name="description" content="Saudalos, a Criatura Mítica exclusiva da Retrocon. Jogue em nosso estande para obter esse Emocre.">
+  <title>{{ pageTitle }}</title>
+  <meta name="description" content="{{ pageDescription }}">
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
   <style>
     @font-face {
@@ -316,7 +323,7 @@ permalink: /saudalos/index.html
       <div class="brandbar">
         <img class="emocre" src="/assets/logo.png" alt="Emocre" />
         <div class="retro-badge">
-          <span class="lbl">Exclusivo</span>
+          <span class="lbl">{{ i18n[locale].mythical.exclusive }}</span>
           <img src="/assets/retrocon-logo.png" alt="Retrocon" />
         </div>
       </div>
@@ -331,34 +338,33 @@ permalink: /saudalos/index.html
       <div class="grid">
         <!-- LEFT: hero sprite -->
         <div class="hero">
-          <div class="watermark">MÍTICO</div>
+          <div class="watermark">{{ i18n[locale].mythical.watermark }}</div>
           <div class="aura"></div>
           <div class="ring"></div>
           <div class="plinth"></div>
-          <img class="sprite" src="/assets/creatures/longing-1-art-front-crt.gif" alt="Saudalos" />
+          <img class="sprite" src="/assets/creatures/longing-1-art-front-crt.gif" alt="{{ i18n[locale].mythical.name }}" />
         </div>
 
         <!-- RIGHT: info -->
         <div class="info">
-          <span class="kicker"><span class="dot"></span>Criatura Mítica</span>
-          <h1 class="name">Saudalos</h1>
+          <span class="kicker"><span class="dot"></span>{{ i18n[locale].mythical.tag }}</span>
+          <h1 class="name">{{ i18n[locale].mythical.name }}</h1>
           <div class="subrow">
-            <span class="emotion">Saudade</span>
-            <span class="lvl">Nível 5</span>
+            <span class="emotion">{{ i18n[locale].mythical.emotion }}</span>
+            <span class="lvl">{{ i18n[locale].mythical.level }}</span>
           </div>
           <div class="types">
-            <span class="type al">Alegria</span>
-            <span class="type tr">Tristeza</span>
+            <span class="type al">{{ i18n[locale].creatures.filters.AL }}</span>
+            <span class="type tr">{{ i18n[locale].creatures.filters.TR }}</span>
           </div>
           <p class="desc">
-            Vagaroso pelas profundezas, seus olhos projetam uma luz trêmula
-            que ilumina <strong>coisas que não existem mais</strong>.
+            {{ i18n[locale].mythical.descIntro }} <strong>{{ i18n[locale].mythical.descBold }}</strong>.
           </p>
 
           <div class="cta">
             <span class="cta-text">
-              Jogue em nosso estande
-              <b>para obter esse Emocre</b>
+              {{ i18n[locale].mythical.ctaLine1 }}
+              <b>{{ i18n[locale].mythical.ctaLine2 }}</b>
             </span>
           </div>
         </div>

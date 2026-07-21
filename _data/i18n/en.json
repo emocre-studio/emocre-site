@@ -29,6 +29,9 @@
     "emotion": "LONGING",
     "level": "Level 5",
     "desc": "Slow through the depths, its eyes cast a flickering light that illuminates things that no longer exist.",
+    "descIntro": "Slow through the depths, its eyes cast a flickering light that illuminates",
+    "descBold": "things that no longer exist",
+    "watermark": "MYTHICAL",
     "cta": "Play at our booth to get this Emocre",
     "ctaLine1": "Play at our booth",
     "ctaLine2": "to get this Emocre"
