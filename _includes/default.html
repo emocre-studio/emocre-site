@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'pt-BR' }}">
+<html lang="{% if locale == 'en' %}en{% else %}pt-BR{% endif %}">
 
 <head>
   <!-- Google tag (gtag.js) -->
@@ -30,20 +30,24 @@
 
 <body>
 <nav>
-  <a class="nav-logo" href="/">
+  <a class="nav-logo" href="/{{ locale }}/">
     <img src="/assets/logo.png" alt="Emocre" />
   </a>
   <ul class="nav-links">
 
-    <li class="nav-demo-only"><a href="#demo" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('demo').offsetTop - 60, behavior: 'smooth'})">Demo</a></li>
-    <li><a href="#creatures" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('creatures').offsetTop - 60, behavior: 'smooth'})">Criaturas</a></li>
-    <li><a href="https://app.emocre.com/leaderboard">Ranking</a></li>
-    <li><a href="/press-kit">Press Kit</a></li>
+    <li class="nav-demo-only"><a href="#demo" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('demo').offsetTop - 60, behavior: 'smooth'})">{{ i18n[locale].nav.demo }}</a></li>
+    <li><a href="#creatures" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('creatures').offsetTop - 60, behavior: 'smooth'})">{{ i18n[locale].nav.creatures }}</a></li>
+    <li><a href="https://app.emocre.com/leaderboard">{{ i18n[locale].nav.ranking }}</a></li>
+    <li><a href="/{{ locale }}/press-kit/">{{ i18n[locale].nav.pressKit }}</a></li>
   </ul>
+  <div class="nav-langs">
+    <a href="/pt/{{ page.url | replace: '/pt/', '' | replace: '/en/', '' }}" class="lang-flag{% if locale == 'pt' %} active{% endif %}" aria-label="Português" title="Português">🇧🇷</a>
+    <a href="/en/{{ page.url | replace: '/pt/', '' | replace: '/en/', '' }}" class="lang-flag{% if locale == 'en' %} active{% endif %}" aria-label="English" title="English">🇺🇸</a>
+  </div>
   <div class="nav-cta">
     <a href="https://store.steampowered.com/app/3848350/Emocre" target="_blank" class="btn btn-steam" onclick="trackEvent('wishlist_click', { location: 'header' })">
       <svg viewBox="0 0 64 64" fill="currentColor"><path d="M0.028 29.874C1.125 13.193 15.017 0 31.993 0c17.693 0 32.035 14.327 32.035 32C64.028 49.673 49.686 64 31.993 64c-14.437 0-26.646-9.549-30.647-22.665L13.472 46.333c.601 2.728 2.483 5.12 5.248 6.27 4.53 1.88 9.728-.26 11.616-4.782.483-1.157.716-2.403.684-3.656L42.225 36.16l.276.005C49.213 36.165 54.669 30.699 54.669 23.985c0-6.714-5.446-12.16-12.168-12.174C35.792 11.811 30.333 17.271 30.333 23.985l.01.0.003.158L22.507 35.518c-1.269-.058-2.543.165-3.752.662-.526.214-1.029.482-1.499.8L.042 29.893c0 0 0 .001 0 .004C.037 29.889.033 29.882.028 29.874zm28.433 17.161c-1.456 3.5-5.472 5.147-8.963 3.694-1.549-.65-2.805-1.847-3.528-3.362l3.961 1.64c2.574 1.07 5.528-.147 6.599-2.719 1.072-2.573-.145-5.527-2.718-6.601l-4.105-1.695c1.58-.6 3.376-.62 5.056.077 1.702.703 3.003 2.027 3.7 3.72.696 1.693.692 3.56-.01 5.246h.008zM42.512 32.1c-4.478-.012-8.103-3.64-8.107-8.113.005-4.472 3.63-8.099 8.107-8.111 4.478.011 8.104 3.638 8.109 8.111-.004 4.474-3.63 8.102-8.109 8.113zm-6.076-8.126c-.002 3.361 2.723 6.088 6.088 6.093 3.365-.003 6.092-2.731 6.09-6.093 0-3.365-2.732-6.095-6.09-6.095-3.365.006-6.09 2.734-6.087 6.095h-.001z"/></svg>
-      Wishlist na Steam
+      {{ i18n[locale].hero.wishlist }}
     </a>
   </div>
 </nav>

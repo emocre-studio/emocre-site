@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="{% if locale == 'en' %}en{% else %}pt-BR{% endif %}">
 
 <head>
   <!-- Google tag (gtag.js) -->
@@ -30,16 +30,20 @@
 
 <body>
 <nav>
-  <a class="nav-logo" href="/">
+  <a class="nav-logo" href="/{{ locale }}/">
     <img src="/assets/logo.png" alt="Emocre" />
   </a>
   <ul class="nav-links">
 
-    <li class="nav-demo-only"><a href="/#demo">Demo</a></li>
-    <li><a href="/#creatures">Criaturas</a></li>
-    <li><a href="https://app.emocre.com/leaderboard">Ranking</a></li>
-    <li><a href="/press-kit">Press Kit</a></li>
+    <li class="nav-demo-only"><a href="/{{ locale }}/#demo">{{ i18n[locale].nav.demo }}</a></li>
+    <li><a href="/{{ locale }}/#creatures">{{ i18n[locale].nav.creatures }}</a></li>
+    <li><a href="https://app.emocre.com/leaderboard">{{ i18n[locale].nav.ranking }}</a></li>
+    <li><a href="/{{ locale }}/press-kit/">{{ i18n[locale].nav.pressKit }}</a></li>
   </ul>
+  <div class="nav-langs">
+    <a href="/pt/{{ page.url | replace: '/pt/', '' | replace: '/en/', '' }}" class="lang-flag{% if locale == 'pt' %} active{% endif %}" aria-label="Português" title="Português">🇧🇷</a>
+    <a href="/en/{{ page.url | replace: '/pt/', '' | replace: '/en/', '' }}" class="lang-flag{% if locale == 'en' %} active{% endif %}" aria-label="English" title="English">🇺🇸</a>
+  </div>
   <div class="nav-cta"></div>
 </nav>
 <main class="site-content">
