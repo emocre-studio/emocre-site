@@ -1,10 +1,21 @@
 
 import {dataPath, siteAssetsPath, siteDataPath, creaturesDir, artBase} from './paths'
 import {emotionEnToPt} from '@emocre/tools/src/schema/emotion'
+import {Types} from '@emocre/tools/src/type/types'
+import {ComplexTypes} from '@emocre/tools/src/type/complex-types'
 import fs from 'fs'
 import {writeJson} from '@emocre/tools/src/file/serialize'
 
 import {CreaturesFileRepository} from '@emocre/tools/src/creature/creatures-file-repository'
+
+async function emotionEnToEn(emotion: string, typesFile: string): Promise<string> {
+  const [types, complexTypes] = await Promise.all([Types.readFromFile(typesFile), ComplexTypes.readFromFile(typesFile)])
+  const complexEntry = complexTypes.find(t => t.name_en === emotion)
+  if (complexEntry) return complexEntry.name_en
+  const typeEntry = types.find(t => t.key === emotion)
+  if (typeEntry) return typeEntry.name_en
+  throw new Error(`Emoção não encontrada: ${emotion}`)
+}
 
 (async () => {
   const repo = new CreaturesFileRepository(creaturesDir, artBase)
@@ -23,9 +34,13 @@ import {CreaturesFileRepository} from '@emocre/tools/src/creature/creatures-file
       return {
         number: c.number,
         name: c.name_pt,
+        nameEn: ((c as any).name_en?.trim()) || c.name_pt,
         description: c.description_pt,
+        descriptionEn: (c.description_en?.trim()) || c.description_pt,
         type1Pt: await emotionEnToPt(c.type_1 as any, dataPath('type/types.yml')),
         type2Pt: c.type_2 ? await emotionEnToPt(c.type_2 as any, dataPath('type/types.yml')) : undefined,
+        type1En: await emotionEnToEn(c.type_1 as any, dataPath('type/types.yml')),
+        type2En: c.type_2 ? await emotionEnToEn(c.type_2 as any, dataPath('type/types.yml')) : undefined,
         type1: c.type_1,
         type2: c.type_2,
         emotion: c.emotion.toLowerCase(),
