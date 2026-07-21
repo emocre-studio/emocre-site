@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "homeTitle": "Emocre — Emotion Creatures",
+    "homeDescription": "Emocre é um jogo de plataforma e batalhas por turnos onde você integra criaturas emocionais. Conheça os Emocres e embarque nesta aventura única!",
+    "playTitle": "Jogar Emocre — Demo",
+    "playDescription": "Jogue a demo de Emocre direto no navegador.",
+    "saudalosTitle": "Saudalos — Criatura Mítica | Emocre × Retrocon",
+    "saudalosDescription": "Saudalos, a Criatura Mítica exclusiva da Retrocon. Jogue em nosso estande para obter esse Emocre."
+  },
+  "nav": {
+    "demo": "Demo",
+    "creatures": "Criaturas",
+    "ranking": "Ranking",
+    "pressKit": "Press Kit",
+    "wishlist": "Wishlist na Steam"
+  },
+  "hero": {
+    "tagline": "Dentro da sua mente, as emoções tomaram forma.",
+    "desc": "Um jogo de plataforma e batalhas por turnos para Mega Drive e PC. Enfrente criaturas feitas de sentimentos e integre-as.",
+    "playDemo": "Jogar a Demo",
+    "wishlist": "Wishlist na Steam",
+    "instagram": "Instagram"
+  },
+  "mythical": {
+    "eventLabel": "Evento: Criatura Mítica",
+    "exclusive": "Exclusivo",
+    "tag": "CRIATURA MÍTICA",
+    "name": "Saudalos",
+    "emotion": "SAUDADE",
+    "level": "Nível 5",
+    "desc": "Vagaroso pelas profundezas, seus olhos projetam uma luz trêmula que ilumina coisas que não existem mais.",
+    "cta": "Jogue em nosso estande para obter esse Emocre",
+    "ctaLine1": "Jogue em nosso estande",
+    "ctaLine2": "para obter esse Emocre"
+  },
+  "demo": {
+    "label": "Demo Gratuita",
+    "title": "Jogue agora no navegador",
+    "body": "Sem download, sem instalação. Experimente as batalhas por equilíbrio e conheça os primeiros Emocres.",
+    "specs": {
+      "genreLabel": "Gênero",
+      "genreValue": "Monster Tamer / Metroidvania",
+      "platformsLabel": "Plataformas",
+      "platformsValue": "Mega Drive · PC (Steam)",
+      "resolutionLabel": "Resolução",
+      "resolutionValue": "320 × 224 (nativa 16-bit)",
+      "statusLabel": "Status",
+      "statusValue": "Em desenvolvimento (~15%)"
+    },
+    "playDemo": "Jogar a Demo"
+  },
+  "creatures": {
+    "compendium": "Compêndio",
+    "title": "Conheça as Criaturas",
+    "filters": {
+      "all": "Todos",
+      "AL": "Alegria",
+      "RA": "Raiva",
+      "TR": "Tristeza",
+      "CO": "Confiança",
+      "EX": "Expectativa",
+      "NO": "Nojo",
+      "SU": "Surpresa",
+      "ME": "Medo"
+    },
+    "more": "Serão 104 Emocres — mais em breve..."
+  },
+  "modal": {
+    "close": "Fechar",
+    "type": "Tipo",
+    "attributes": "Atributos",
+    "energy": "Energia",
+    "power": "Força",
+    "defense": "Defesa",
+    "speed": "Velocidade",
+    "descriptionFallback": "Descrição em breve..."
+  },
+  "pressKit": {
+    "label": "Imprensa",
+    "title": "Press Kit",
+    "body": "Emocre é um Monster Tamer / Metroidvania 16-bit que une nostalgia com inteligência emocional. Desenvolvido de forma solo por Afonso França de Oliveira, São Paulo, Brasil.",
+    "quote": "\"O Emocre nasceu de uma experiência pessoal — eu sempre tive dificuldade para identificar o que eu estava sentindo. Quero que o jogador sinta que integrar uma emoção exige reconhecê-la primeiro.\"",
+    "quoteAuthor": "— Afonso França de Oliveira, desenvolvedor",
+    "cta": "Ver Press Kit Completo",
+    "facts": {
+      "developerLabel": "Desenvolvedora",
+      "developerValue": "Afonso França de Oliveira (solo dev)",
+      "genreLabel": "Gênero",
+      "genreValue": "Monster Tamer · Metroidvania · Plataforma",
+      "platformsLabel": "Plataformas",
+      "platformsValue": "Mega Drive / Genesis · Steam (PC)",
+      "resolutionLabel": "Resolução",
+      "resolutionValue": "320 × 224 pixels (nativa 16-bit)",
+      "languagesLabel": "Idiomas",
+      "languagesValue": "Português (BR) · Inglês",
+      "statusLabel": "Status",
+      "statusValue": "Em desenvolvimento ~15%",
+      "creaturesLabel": "Criaturas",
+      "creaturesValue": "104 Emocres planejados",
+      "inspirationsLabel": "Inspirações",
+      "inspirationsValue": "Pokémon · Celeste · Divertidamente · Super Metroid",
+      "contactLabel": "Contato"
+    }
+  },
+  "footer": {
+    "copy": "© 2026 Afonso França de Oliveira. Todos os direitos reservados."
+  },
+  "game": {
+    "loading": "Carregando",
+    "loadingButton": "Carregando...",
+    "close": "Fechar jogo",
+    "wishlistPromptTitle": "Curtiu a demo?",
+    "wishlistPromptBody": "Adicione à sua wishlist na Steam pra não esquecer 😊"
+  }
+}

@@ -1,0 +1,115 @@
+{
+  "meta": {
+    "homeTitle": "Emocre — Emotion Creatures",
+    "homeDescription": "Emocre is a platformer and turn-based battle game where you integrate emotional creatures. Meet the Emocres and embark on this unique adventure!",
+    "playTitle": "Play Emocre — Demo",
+    "playDescription": "Play the Emocre demo right in your browser.",
+    "saudalosTitle": "Saudalos — Mythical Creature | Emocre × Retrocon",
+    "saudalosDescription": "Saudalos, Retrocon's exclusive Mythical Creature. Play at our booth to get this Emocre."
+  },
+  "nav": {
+    "demo": "Demo",
+    "creatures": "Creatures",
+    "ranking": "Leaderboard",
+    "pressKit": "Press Kit",
+    "wishlist": "Wishlist on Steam"
+  },
+  "hero": {
+    "tagline": "Inside your mind, emotions have taken shape.",
+    "desc": "A platformer and turn-based battle game for Mega Drive and PC. Face creatures made of feelings and integrate them.",
+    "playDemo": "Play the Demo",
+    "wishlist": "Wishlist on Steam",
+    "instagram": "Instagram"
+  },
+  "mythical": {
+    "eventLabel": "Event: Mythical Creature",
+    "exclusive": "Exclusive",
+    "tag": "MYTHICAL CREATURE",
+    "name": "Saudalos",
+    "emotion": "LONGING",
+    "level": "Level 5",
+    "desc": "Slow through the depths, its eyes cast a flickering light that illuminates things that no longer exist.",
+    "cta": "Play at our booth to get this Emocre",
+    "ctaLine1": "Play at our booth",
+    "ctaLine2": "to get this Emocre"
+  },
+  "demo": {
+    "label": "Free Demo",
+    "title": "Play now in your browser",
+    "body": "No download, no install. Try the equilibrium battles and meet the first Emocres.",
+    "specs": {
+      "genreLabel": "Genre",
+      "genreValue": "Monster Tamer / Metroidvania",
+      "platformsLabel": "Platforms",
+      "platformsValue": "Mega Drive · PC (Steam)",
+      "resolutionLabel": "Resolution",
+      "resolutionValue": "320 × 224 (native 16-bit)",
+      "statusLabel": "Status",
+      "statusValue": "In development (~15%)"
+    },
+    "playDemo": "Play the Demo"
+  },
+  "creatures": {
+    "compendium": "Compendium",
+    "title": "Meet the Creatures",
+    "filters": {
+      "all": "All",
+      "AL": "Joy",
+      "RA": "Anger",
+      "TR": "Sadness",
+      "CO": "Trust",
+      "EX": "Anticipation",
+      "NO": "Disgust",
+      "SU": "Surprise",
+      "ME": "Fear"
+    },
+    "more": "104 Emocres are coming — more soon..."
+  },
+  "modal": {
+    "close": "Close",
+    "type": "Type",
+    "attributes": "Stats",
+    "energy": "Energy",
+    "power": "Power",
+    "defense": "Defense",
+    "speed": "Speed",
+    "descriptionFallback": "Description coming soon..."
+  },
+  "pressKit": {
+    "label": "Press",
+    "title": "Press Kit",
+    "body": "Emocre is a 16-bit Monster Tamer / Metroidvania that blends nostalgia with emotional intelligence. Solo-developed by Afonso França de Oliveira, São Paulo, Brazil.",
+    "quote": "\"Emocre was born from a personal experience — I always had trouble identifying what I was feeling. I want players to feel that integrating an emotion means recognizing it first.\"",
+    "quoteAuthor": "— Afonso França de Oliveira, developer",
+    "cta": "See Full Press Kit",
+    "facts": {
+      "developerLabel": "Developer",
+      "developerValue": "Afonso França de Oliveira (solo dev)",
+      "genreLabel": "Genre",
+      "genreValue": "Monster Tamer · Metroidvania · Platformer",
+      "platformsLabel": "Platforms",
+      "platformsValue": "Mega Drive / Genesis · Steam (PC)",
+      "resolutionLabel": "Resolution",
+      "resolutionValue": "320 × 224 pixels (native 16-bit)",
+      "languagesLabel": "Languages",
+      "languagesValue": "English · Portuguese (BR)",
+      "statusLabel": "Status",
+      "statusValue": "In development ~15%",
+      "creaturesLabel": "Creatures",
+      "creaturesValue": "104 planned Emocres",
+      "inspirationsLabel": "Inspirations",
+      "inspirationsValue": "Pokémon · Celeste · Inside Out · Super Metroid",
+      "contactLabel": "Contact"
+    }
+  },
+  "footer": {
+    "copy": "© 2026 Afonso França de Oliveira. All rights reserved."
+  },
+  "game": {
+    "loading": "Loading",
+    "loadingButton": "Loading...",
+    "close": "Close game",
+    "wishlistPromptTitle": "Enjoyed the demo?",
+    "wishlistPromptBody": "Add it to your Steam wishlist so you don't forget 😊"
+  }
+}
