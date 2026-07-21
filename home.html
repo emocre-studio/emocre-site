@@ -1,0 +1,819 @@
+---
+layout: default
+pagination:
+  data: locales
+  size: 1
+  alias: locale
+permalink: "/{{ locale }}/index.html"
+eleventyComputed:
+  title: "{{ i18n[locale].meta.homeTitle }}"
+  description: "{{ i18n[locale].meta.homeDescription }}"
+---
+
+<!-- ── HERO ── -->
+<section class="hero" id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-creatures-grid-bg" id="heroBgGrid"></div>
+
+  <div class="hero-logo">
+    <img src="/assets/logo.png" alt="Emocre — Emotion Creatures" />
+  </div>
+
+  <p class="hero-tagline">{{ i18n[locale].hero.tagline }}</p>
+  <p class="hero-desc">{{ i18n[locale].hero.desc }}</p>
+
+  <div class="hero-buttons">
+    <a href="#demo" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('demo').offsetTop - 60, behavior: 'smooth'})" class="btn btn-primary btn-lg">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      {{ i18n[locale].hero.playDemo }}
+    </a>
+    <a href="https://store.steampowered.com/app/3848350/Emocre" target="_blank" class="btn btn-steam" onclick="trackEvent('wishlist_click', { location: 'hero' })">
+      <svg viewBox="0 0 64 64" fill="currentColor"><path d="M0.028 29.874C1.125 13.193 15.017 0 31.993 0c17.693 0 32.035 14.327 32.035 32C64.028 49.673 49.686 64 31.993 64c-14.437 0-26.646-9.549-30.647-22.665L13.472 46.333c.601 2.728 2.483 5.12 5.248 6.27 4.53 1.88 9.728-.26 11.616-4.782.483-1.157.716-2.403.684-3.656L42.225 36.16l.276.005C49.213 36.165 54.669 30.699 54.669 23.985c0-6.714-5.446-12.16-12.168-12.174C35.792 11.811 30.333 17.271 30.333 23.985l.01.0.003.158L22.507 35.518c-1.269-.058-2.543.165-3.752.662-.526.214-1.029.482-1.499.8L.042 29.893c0 0 0 .001 0 .004C.037 29.889.033 29.882.028 29.874zm28.433 17.161c-1.456 3.5-5.472 5.147-8.963 3.694-1.549-.65-2.805-1.847-3.528-3.362l3.961 1.64c2.574 1.07 5.528-.147 6.599-2.719 1.072-2.573-.145-5.527-2.718-6.601l-4.105-1.695c1.58-.6 3.376-.62 5.056.077 1.702.703 3.003 2.027 3.7 3.72.696 1.693.692 3.56-.01 5.246h.008zM42.512 32.1c-4.478-.012-8.103-3.64-8.107-8.113.005-4.472 3.63-8.099 8.107-8.111 4.478.011 8.104 3.638 8.109 8.111-.004 4.474-3.63 8.102-8.109 8.113zm-6.076-8.126c-.002 3.361 2.723 6.088 6.088 6.093 3.365-.003 6.092-2.731 6.09-6.093 0-3.365-2.732-6.095-6.09-6.095-3.365.006-6.09 2.734-6.087 6.095h-.001z"/></svg>
+      {{ i18n[locale].hero.wishlist }}
+    </a>
+    <a href="https://instagram.com/emocregame" target="_blank" class="btn btn-instagram" onclick="trackEvent('social_click', { network: 'instagram', location: 'hero' })">
+      <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
+      {{ i18n[locale].hero.instagram }}
+    </a>
+  </div>
+</section>
+
+<!-- ── MYTHICAL CREATURE SECTION ── -->
+<section class="mythical-section" id="mythical">
+  <style>
+    .mythical-section {
+      background: var(--bg);
+    }
+
+    .mythical-showcase-container {
+      width: 100%;
+      max-width: 384px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 10;
+    }
+
+    .mythical-showcase-card {
+      background: linear-gradient(135deg, rgba(234, 179, 8, 0.05) 0%, rgba(245, 158, 11, 0.1) 100%), var(--surface);
+      border: 1px solid rgba(234, 179, 8, 0.5);
+      border-radius: 12px;
+      padding: 1.25rem;
+      box-shadow: 0 8px 32px rgba(234, 179, 8, 0.12);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .mythical-showcase-card:hover {
+      transform: scale(1.02);
+    }
+
+    /* sparkle */
+    .mythical-sparkles {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 0.5rem;
+      color: #eab308;
+    }
+
+    .sparkle-icon {
+      width: 14px;
+      height: 14px;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    /* header */
+    .mythical-showcase-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      color: #ca8a04;
+      font-family: var(--font-game);
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .mythical-event-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #000;
+      border-radius: 4px;
+      padding: 3px 7px;
+    }
+
+    .mythical-event-badge-text {
+      color: #fff;
+      font-size: 9px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .mythical-event-logo {
+      display: block;
+      height: 13px;
+      width: auto;
+    }
+
+    /* info row */
+    .mythical-creature-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 1rem;
+    }
+
+    .mythical-info-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mythical-tag {
+      font-family: var(--font-game);
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .mythical-name {
+      font-family: var(--font-game);
+      font-size: 18px;
+      color: var(--text);
+      letter-spacing: 0.025em;
+      margin: 0;
+      line-height: 1.25;
+    }
+
+    .mythical-emotion {
+      font-family: var(--font-game);
+      font-size: 9px;
+      letter-spacing: 0.05em;
+      color: #ca8a04;
+      text-transform: uppercase;
+      display: block;
+      margin-top: 4px;
+      font-weight: bold;
+    }
+
+    .mythical-info-right {
+      text-align: right;
+    }
+
+    .mythical-lvl-badge {
+      font-family: var(--font-game);
+      font-size: 10px;
+      color: var(--green);
+      background: var(--bg2);
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid rgba(78, 143, 78, 0.1);
+      display: inline-block;
+    }
+
+    /* image */
+    .mythical-creature-img-wrap {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      height: 192px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .mythical-glow {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(234, 179, 8, 0.10) 0%, transparent 70%);
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    .mythical-img {
+      height: 100%;
+      object-fit: contain;
+      image-rendering: pixelated;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* types & desc */
+    .mythical-types {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .mythical-desc {
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0;
+      text-align: center;
+    }
+
+    .mythical-cta {
+      margin: 1rem -1.25rem -1.25rem;
+      padding: 0.85rem 1rem;
+      background: linear-gradient(135deg, #eab308 0%, #f59e0b 100%);
+      border-radius: 0;
+      color: #1a1a1a;
+      font-family: var(--font-game);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 0.03em;
+      text-align: center;
+      line-height: 1.4;
+      box-shadow: 0 -4px 16px rgba(234, 179, 8, 0.35);
+      animation: ctaPulse 2.4s infinite ease-in-out;
+    }
+
+    @keyframes ctaPulse {
+      0%, 100% { opacity: 0.9; }
+      50% { opacity: 1; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.7; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.05); }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .mythical-showcase-header,
+      .mythical-emotion {
+        color: #facc15;
+      }
+      .mythical-creature-img-wrap {
+        background: rgba(26, 46, 26, 0.3);
+      }
+    }
+
+    @media (min-width: 640px) {
+      .mythical-showcase-container {
+        max-width: 1100px;
+      }
+
+      .mythical-showcase-card {
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        grid-template-areas:
+          "img  header"
+          "img  info"
+          "img  types"
+          "img  desc"
+          "cta  cta";
+        column-gap: 2.5rem;
+        row-gap: 0.75rem;
+        align-items: start;
+        padding: 2.5rem 3rem;
+        border-radius: 20px;
+      }
+
+      .mythical-showcase-header {
+        grid-area: header;
+        justify-content: flex-start;
+        font-size: 13px;
+        margin-bottom: 0;
+      }
+
+      .mythical-creature-info {
+        grid-area: info;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-bottom: 0;
+      }
+
+      .mythical-info-right {
+        text-align: left;
+      }
+
+      .mythical-name {
+        font-size: 34px;
+      }
+
+      .mythical-emotion {
+        font-size: 11px;
+      }
+
+      .mythical-tag {
+        font-size: 11px;
+      }
+
+      .mythical-creature-img-wrap {
+        grid-area: img;
+        height: 100%;
+        min-height: 220px;
+        margin-bottom: 0;
+        border-radius: 14px;
+        align-self: stretch;
+      }
+
+      .mythical-types {
+        grid-area: types;
+        justify-content: flex-start;
+        margin-bottom: 0;
+      }
+
+      .mythical-desc {
+        grid-area: desc;
+        font-size: 13px;
+        text-align: left;
+      }
+
+      .mythical-cta {
+        grid-area: cta;
+        margin: 0.75rem -3rem -2.5rem;
+        border-radius: 0 0 20px 20px;
+      }
+    }
+  </style>
+
+  <div class="section-inner">
+    <div class="mythical-showcase-container">
+      <div class="mythical-showcase-card">
+
+        <div class="mythical-sparkles">
+          <svg class="sparkle-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l2.4 4.9 5.3.8-3.8 3.7.9 5.3-4.8-2.5-4.8 2.5.9-5.3-3.8-3.7 5.3-.8z"/>
+          </svg>
+        </div>
+
+        <div class="mythical-showcase-header">
+          <span>{{ i18n[locale].mythical.eventLabel }}</span>
+          <span class="mythical-event-badge">
+            <span class="mythical-event-badge-text">{{ i18n[locale].mythical.exclusive }}</span>
+            <img src="/assets/retrocon-logo.png" alt="Retrocon" class="mythical-event-logo" />
+          </span>
+        </div>
+
+        <div class="mythical-creature-info">
+          <div class="mythical-info-left">
+            <span class="mythical-tag">{{ i18n[locale].mythical.tag }}</span>
+            <h3 class="mythical-name">{{ i18n[locale].mythical.name }}</h3>
+            <span class="mythical-emotion">{{ i18n[locale].mythical.emotion }}</span>
+          </div>
+          <div class="mythical-info-right">
+            <span class="mythical-lvl-badge">{{ i18n[locale].mythical.level }}</span>
+          </div>
+        </div>
+
+        <div class="mythical-creature-img-wrap">
+          <div class="mythical-glow"></div>
+          <img
+            src="/assets/creatures/longing-1-art-front-crt.gif"
+            alt="{{ i18n[locale].mythical.name }}"
+            class="mythical-img"
+          />
+        </div>
+
+        <div class="mythical-types">
+          <span class="type-badge type-AL">{{ i18n[locale].creatures.filters.AL }}</span>
+          <span class="type-badge type-TR">{{ i18n[locale].creatures.filters.TR }}</span>
+        </div>
+
+        <p class="mythical-desc">
+          {{ i18n[locale].mythical.desc }}
+        </p>
+
+        <div class="mythical-cta">
+          {{ i18n[locale].mythical.cta }}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── DEMO ── -->
+<section class="demo-section" id="demo">
+  <div class="section-inner">
+    <div class="demo-layout">
+      <div class="demo-screenshots">
+        <div class="screenshots-grid">
+          <img src="/assets/screen0.png" alt="Emocre - tela inicial" />
+          <img src="/assets/screen1.png" alt="Gameplay" />
+          <img src="/assets/screen5.png" alt="Batalha" />
+          <img src="/assets/screen3.png" alt="Exploração" />
+          <img src="/assets/screen4.png" alt="Exploração" />
+        </div>
+      </div>
+      <div class="demo-info">
+        <p class="section-label">{{ i18n[locale].demo.label }}</p>
+        <h2 class="section-title">{{ i18n[locale].demo.title }}</h2>
+        <p class="section-body">{{ i18n[locale].demo.body }}</p>
+        <div class="demo-specs">
+          <div class="demo-spec">
+            <span class="demo-spec-label">{{ i18n[locale].demo.specs.genreLabel }}</span>
+            <span class="demo-spec-value">{{ i18n[locale].demo.specs.genreValue }}</span>
+          </div>
+          <div class="demo-spec">
+            <span class="demo-spec-label">{{ i18n[locale].demo.specs.platformsLabel }}</span>
+            <span class="demo-spec-value">{{ i18n[locale].demo.specs.platformsValue }}</span>
+          </div>
+          <div class="demo-spec">
+            <span class="demo-spec-label">{{ i18n[locale].demo.specs.resolutionLabel }}</span>
+            <span class="demo-spec-value">{{ i18n[locale].demo.specs.resolutionValue }}</span>
+          </div>
+          <div class="demo-spec">
+            <span class="demo-spec-label">{{ i18n[locale].demo.specs.statusLabel }}</span>
+            <span class="demo-spec-value">{{ i18n[locale].demo.specs.statusValue }}</span>
+          </div>
+        </div>
+        <button onclick="openGame()" class="btn btn-primary btn-lg">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          {{ i18n[locale].demo.playDemo }}
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CREATURES ── -->
+<section class="creatures-section" id="creatures">
+  <div class="section-inner">
+    <div class="creatures-header">
+      <div>
+        <p class="section-label">{{ i18n[locale].creatures.compendium }}</p>
+        <h2 class="section-title">{{ i18n[locale].creatures.title }}</h2>
+      </div>
+      <div class="creatures-filter" id="filterContainer">
+        <button class="filter-btn active" data-filter="all">{{ i18n[locale].creatures.filters.all }}</button>
+        <button class="filter-btn" data-filter="AL" style="--type-color: var(--joy);">{{ i18n[locale].creatures.filters.AL }}</button>
+        <button class="filter-btn" data-filter="RA" style="--type-color: var(--anger);">{{ i18n[locale].creatures.filters.RA }}</button>
+        <button class="filter-btn" data-filter="TR" style="--type-color: var(--sadness);">{{ i18n[locale].creatures.filters.TR }}</button>
+        <button class="filter-btn" data-filter="CO" style="--type-color: var(--trust);">{{ i18n[locale].creatures.filters.CO }}</button>
+        <button class="filter-btn" data-filter="EX" style="--type-color: var(--anticipation);">{{ i18n[locale].creatures.filters.EX }}</button>
+        <button class="filter-btn" data-filter="NO" style="--type-color: var(--disgust);">{{ i18n[locale].creatures.filters.NO }}</button>
+        <button class="filter-btn" data-filter="SU" style="--type-color: var(--surprise);">{{ i18n[locale].creatures.filters.SU }}</button>
+        <button class="filter-btn" data-filter="ME" style="--type-color: var(--fear);">{{ i18n[locale].creatures.filters.ME }}</button>
+      </div>
+    </div>
+
+    <div class="creatures-grid" id="creaturesGrid"></div>
+
+    <p class="creatures-more">{{ i18n[locale].creatures.more }}</p>
+  </div>
+</section>
+
+<!-- ── CREATURE MODAL ── -->
+<div class="modal-overlay" id="creatureModal" role="dialog" aria-modal="true">
+  <div class="modal-box">
+    <button class="modal-close" id="modalClose" aria-label="{{ i18n[locale].modal.close }}">&times;</button>
+    <div class="modal-header-bar" id="modalHeaderBar"></div>
+    <div class="modal-content">
+      <div class="modal-left">
+        <div class="modal-creature-img">
+          <img id="modalImg" src="" alt="" />
+        </div>
+        <div class="modal-meta-block">
+          <span class="modal-meta-label">{{ i18n[locale].modal.type }}</span>
+          <div class="creature-types" id="modalTypes"></div>
+        </div>
+
+      </div>
+      <div class="modal-right">
+        <div class="modal-title">
+          <span class="modal-num" id="modalNum"></span>
+          <span class="modal-name" id="modalName"></span>
+        </div>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div>
+          <p class="modal-meta-label" style="margin-bottom:0.75rem;">{{ i18n[locale].modal.attributes }}</p>
+          <div class="modal-stats">
+            <div class="stat-row">
+              <span class="stat-label">{{ i18n[locale].modal.energy }}</span>
+              <div class="stat-track"><div class="stat-bar hp" id="barHp"></div></div>
+              <span class="stat-val" id="valHp"></span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">{{ i18n[locale].modal.power }}</span>
+              <div class="stat-track"><div class="stat-bar atk" id="barAtk"></div></div>
+              <span class="stat-val" id="valAtk"></span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">{{ i18n[locale].modal.defense }}</span>
+              <div class="stat-track"><div class="stat-bar def" id="barDef"></div></div>
+              <span class="stat-val" id="valDef"></span>
+            </div>
+            <div class="stat-row">
+              <span class="stat-label">{{ i18n[locale].modal.speed }}</span>
+              <div class="stat-track"><div class="stat-bar spd" id="barSpd"></div></div>
+              <span class="stat-val" id="valSpd"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── PRESS KIT ── -->
+<section class="presskit-section" id="presskit">
+  <div class="section-inner">
+    <div class="presskit-layout">
+      <div class="presskit-info">
+        <p class="section-label">{{ i18n[locale].pressKit.label }}</p>
+        <h2 class="section-title">{{ i18n[locale].pressKit.title }}</h2>
+        <p class="section-body">{{ i18n[locale].pressKit.body }}</p>
+
+        <div class="presskit-quote">
+          <p>{{ i18n[locale].pressKit.quote }}</p>
+          <cite>{{ i18n[locale].pressKit.quoteAuthor }}</cite>
+        </div>
+
+        <div class="presskit-actions">
+          <a href="/{{ locale }}/press-kit/" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 1.5L18.5 9H13V3.5zM6 20V4h5v7h7v9H6z"/></svg>
+            {{ i18n[locale].pressKit.cta }}
+          </a>
+          <a href="mailto:afonso@emocre.com" class="btn btn-ghost">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            afonso@emocre.com
+          </a>
+        </div>
+      </div>
+
+      <div class="presskit-facts">
+        <div class="fact-row">
+          <span class="fact-key">{{ i18n[locale].pressKit.facts.developerLabel }}</span>
+          <span class="fact-val">{{ i18n[locale].pressKit.facts.developerValue }}</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">{{ i18n[locale].pressKit.facts.genreLabel }}</span>
+          <span class="fact-val">{{ i18n[locale].pressKit.facts.genreValue }}</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">{{ i18n[locale].pressKit.facts.platformsLabel }}</span>
+          <span class="fact-val">{{ i18n[locale].pressKit.facts.platformsValue }}</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">{{ i18n[locale].pressKit.facts.resolutionLabel }}</span>
+          <span class="fact-val">{{ i18n[locale].pressKit.facts.resolutionValue }}</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">{{ i18n[locale].pressKit.facts.languagesLabel }}</span>
+          <span class="fact-val">{{ i18n[locale].pressKit.facts.languagesValue }}</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">{{ i18n[locale].pressKit.facts.statusLabel }}</span>
+          <span class="fact-val">{{ i18n[locale].pressKit.facts.statusValue }}</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">{{ i18n[locale].pressKit.facts.creaturesLabel }}</span>
+          <span class="fact-val">{{ i18n[locale].pressKit.facts.creaturesValue }}</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">{{ i18n[locale].pressKit.facts.inspirationsLabel }}</span>
+          <span class="fact-val">{{ i18n[locale].pressKit.facts.inspirationsValue }}</span>
+        </div>
+        <div class="fact-row">
+          <span class="fact-key">{{ i18n[locale].pressKit.facts.contactLabel }}</span>
+          <span class="fact-val">afonso@emocre.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="/assets/logo.png" alt="Emocre" />
+    </div>
+    <div class="footer-links">
+      <a href="https://store.steampowered.com/app/3848350/Emocre" target="_blank" class="btn btn-steam" onclick="trackEvent('wishlist_click', { location: 'footer' })">
+        <svg viewBox="0 0 64 64" fill="currentColor" style="width:16px;height:16px;"><path d="M0.028 29.874C1.125 13.193 15.017 0 31.993 0c17.693 0 32.035 14.327 32.035 32C64.028 49.673 49.686 64 31.993 64c-14.437 0-26.646-9.549-30.647-22.665L13.472 46.333c.601 2.728 2.483 5.12 5.248 6.27 4.53 1.88 9.728-.26 11.616-4.782.483-1.157.716-2.403.684-3.656L42.225 36.16l.276.005C49.213 36.165 54.669 30.699 54.669 23.985c0-6.714-5.446-12.16-12.168-12.174C35.792 11.811 30.333 17.271 30.333 23.985l.01.0.003.158L22.507 35.518c-1.269-.058-2.543.165-3.752.662-.526.214-1.029.482-1.499.8L.042 29.893c0 0 0 .001 0 .004C.037 29.889.033 29.882.028 29.874zm28.433 17.161c-1.456 3.5-5.472 5.147-8.963 3.694-1.549-.65-2.805-1.847-3.528-3.362l3.961 1.64c2.574 1.07 5.528-.147 6.599-2.719 1.072-2.573-.145-5.527-2.718-6.601l-4.105-1.695c1.58-.6 3.376-.62 5.056.077 1.702.703 3.003 2.027 3.7 3.72.696 1.693.692 3.56-.01 5.246h.008zM42.512 32.1c-4.478-.012-8.103-3.64-8.107-8.113.005-4.472 3.63-8.099 8.107-8.111 4.478.011 8.104 3.638 8.109 8.111-.004 4.474-3.63 8.102-8.109 8.113zm-6.076-8.126c-.002 3.361 2.723 6.088 6.088 6.093 3.365-.003 6.092-2.731 6.09-6.093 0-3.365-2.732-6.095-6.09-6.095-3.365.006-6.09 2.734-6.087 6.095h-.001z"/></svg>
+        {{ i18n[locale].hero.wishlist }}
+      </a>
+      <a href="https://instagram.com/emocregame" target="_blank" class="btn btn-instagram" onclick="trackEvent('social_click', { network: 'instagram', location: 'footer' })">
+        <svg viewBox="0 0 16 16" fill="currentColor" style="width:16px;height:16px;"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
+        {{ i18n[locale].hero.instagram }}
+      </a>
+      <a href="mailto:afonso@emocre.com" class="btn btn-ghost">afonso@emocre.com</a>
+    </div>
+    <p class="footer-copy">{{ i18n[locale].footer.copy }}</p>
+  </div>
+</footer>
+
+<!-- ── GAME OVERLAY BUTTONS ── -->
+<a id="gameWishlistBtn" href="https://store.steampowered.com/app/3848350/Emocre" target="_blank" rel="noopener" aria-label="{{ i18n[locale].hero.wishlist }}" onclick="trackEvent('wishlist_click', { location: 'demo_overlay' })">
+  <svg viewBox="0 0 64 64" fill="currentColor" width="16" height="16"><path d="M0.028 29.874C1.125 13.193 15.017 0 31.993 0c17.693 0 32.035 14.327 32.035 32C64.028 49.673 49.686 64 31.993 64c-14.437 0-26.646-9.549-30.647-22.665L13.472 46.333c.601 2.728 2.483 5.12 5.248 6.27 4.53 1.88 9.728-.26 11.616-4.782.483-1.157.716-2.403.684-3.656L42.225 36.16l.276.005C49.213 36.165 54.669 30.699 54.669 23.985c0-6.714-5.446-12.16-12.168-12.174C35.792 11.811 30.333 17.271 30.333 23.985l.01.0.003.158L22.507 35.518c-1.269-.058-2.543.165-3.752.662-.526.214-1.029.482-1.499.8L.042 29.893c0 0 0 .001 0 .004C.037 29.889.033 29.882.028 29.874zm28.433 17.161c-1.456 3.5-5.472 5.147-8.963 3.694-1.549-.65-2.805-1.847-3.528-3.362l3.961 1.64c2.574 1.07 5.528-.147 6.599-2.719 1.072-2.573-.145-5.527-2.718-6.601l-4.105-1.695c1.58-.6 3.376-.62 5.056.077 1.702.703 3.003 2.027 3.7 3.72.696 1.693.692 3.56-.01 5.246h.008zM42.512 32.1c-4.478-.012-8.103-3.64-8.107-8.113.005-4.472 3.63-8.099 8.107-8.111 4.478.011 8.104 3.638 8.109 8.111-.004 4.474-3.63 8.102-8.109 8.113zm-6.076-8.126c-.002 3.361 2.723 6.088 6.088 6.093 3.365-.003 6.092-2.731 6.09-6.093 0-3.365-2.732-6.095-6.09-6.095-3.365.006-6.09 2.734-6.087 6.095h-.001z"/></svg>
+  {{ i18n[locale].hero.wishlist }}
+</a>
+<!-- ── GAME LOADING ── -->
+<div id="gameLoading" aria-live="polite">
+  <img src="/assets/logo.png" alt="" />
+  <p class="game-loading-text">{{ i18n[locale].game.loading }}</p>
+</div>
+
+<button id="gameCloseBtn" onclick="requestCloseGame()" aria-label="{{ i18n[locale].game.close }}">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+  {{ i18n[locale].modal.close }}
+</button>
+
+<!-- ── WISHLIST PROMPT (on close) ── -->
+<div id="wishlistPrompt" role="dialog" aria-modal="true" aria-labelledby="wishlistPromptTitle">
+  <div class="wishlist-prompt-card">
+    <h3 id="wishlistPromptTitle">{{ i18n[locale].game.wishlistPromptTitle }}</h3>
+    <p>{{ i18n[locale].game.wishlistPromptBody }}</p>
+    <div class="wishlist-prompt-actions">
+      <a href="https://store.steampowered.com/app/3848350/Emocre" target="_blank" rel="noopener" class="btn btn-steam btn-lg" onclick="trackEvent('wishlist_click', { location: 'demo_prompt' }); finalizeClose()">
+        <svg viewBox="0 0 64 64" fill="currentColor"><path d="M0.028 29.874C1.125 13.193 15.017 0 31.993 0c17.693 0 32.035 14.327 32.035 32C64.028 49.673 49.686 64 31.993 64c-14.437 0-26.646-9.549-30.647-22.665L13.472 46.333c.601 2.728 2.483 5.12 5.248 6.27 4.53 1.88 9.728-.26 11.616-4.782.483-1.157.716-2.403.684-3.656L42.225 36.16l.276.005C49.213 36.165 54.669 30.699 54.669 23.985c0-6.714-5.446-12.16-12.168-12.174C35.792 11.811 30.333 17.271 30.333 23.985l.01.0.003.158L22.507 35.518c-1.269-.058-2.543.165-3.752.662-.526.214-1.029.482-1.499.8L.042 29.893c0 0 0 .001 0 .004C.037 29.889.033 29.882.028 29.874zm28.433 17.161c-1.456 3.5-5.472 5.147-8.963 3.694-1.549-.65-2.805-1.847-3.528-3.362l3.961 1.64c2.574 1.07 5.528-.147 6.599-2.719 1.072-2.573-.145-5.527-2.718-6.601l-4.105-1.695c1.58-.6 3.376-.62 5.056.077 1.702.703 3.003 2.027 3.7 3.72.696 1.693.692 3.56-.01 5.246h.008zM42.512 32.1c-4.478-.012-8.103-3.64-8.107-8.113.005-4.472 3.63-8.099 8.107-8.111 4.478.011 8.104 3.638 8.109 8.111-.004 4.474-3.63 8.102-8.109 8.113zm-6.076-8.126c-.002 3.361 2.723 6.088 6.088 6.093 3.365-.003 6.092-2.731 6.09-6.093 0-3.365-2.732-6.095-6.09-6.095-3.365.006-6.09 2.734-6.087 6.095h-.001z"/></svg>
+        {{ i18n[locale].hero.wishlist }}
+      </a>
+      <button class="btn btn-ghost btn-lg" onclick="finalizeClose()">{{ i18n[locale].modal.close }}</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/nostalgist"></script>
+<script src="https://unpkg.com/nipplejs@0.10.2/dist/nipplejs.js"></script>
+<script src="/assets/js/emulator.js"></script>
+<script>
+const CREATURES = {{ creatures | jsonify }};
+const LOCALE = "{{ locale }}";
+const I18N = {{ i18n[locale] | jsonify }};
+
+(function() {
+  const allImgs = CREATURES.map(c => `${c.emotion}-${c.stage}`);
+  const grid = document.getElementById('heroBgGrid');
+  const hero = document.querySelector('.hero');
+  const tileSize = 100;
+
+  function shuffle(arr) {
+    const a = [...arr];
+    for (let i = a.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  function fill() {
+    const cols = Math.ceil(hero.offsetWidth / tileSize) + 1;
+    const rows = Math.ceil(hero.offsetHeight / tileSize) + 1;
+    const total = cols * rows;
+    grid.style.width = (cols * tileSize) + 'px';
+    grid.style.gridTemplateColumns = `repeat(${cols}, ${tileSize}px)`;
+    grid.innerHTML = '';
+    let pool = [];
+    while (pool.length < total) pool = pool.concat(shuffle(allImgs));
+    pool.slice(0, total).forEach(key => {
+      const parts = key.split('-');
+      const stage = parts.pop();
+      const emotion = parts.join('-');
+      const img = document.createElement('img');
+      img.src = `/assets/creatures/${emotion}-${stage}-art-front.png`;
+      img.alt = '';
+      grid.appendChild(img);
+    });
+  }
+
+  fill();
+  window.addEventListener('resize', fill);
+})();
+
+const TYPE_COLORS = {
+  AL: '#a8d87f', RA: '#ff7070', TR: '#5ac8e8', CO: '#f096c8',
+  EX: '#ffb84d', NO: '#9898ff', SU: '#d4d444', ME: '#aaaaaa'
+};
+
+function buildCard(c) {
+  const card = document.createElement('div');
+  card.className = 'creature-card';
+  card.dataset.types = [c.type1, c.type2].filter(Boolean).join(',');
+  const numStr = '#' + String(c.number).padStart(3,'0') + (c.complexTypeName ? ' ' + c.complexTypeName : '');
+  const name = LOCALE === 'en' ? c.nameEn : c.name;
+  const type1Name = LOCALE === 'en' ? c.type1En : c.type1Pt;
+  const type2Name = LOCALE === 'en' ? c.type2En : c.type2Pt;
+  card.innerHTML = `
+    <span class="creature-number">${numStr}</span>
+    <div class="creature-img-wrap">
+      <img src="/assets/creatures/${c.emotion}-${c.stage}-art-front.png" alt="${name}" loading="lazy" />
+    </div>
+    <span class="creature-name">${name}</span>
+    <div class="creature-types">
+      <span class="type-badge type-${c.type1}">${type1Name}</span>
+      ${c.type2 ? `<span class="type-badge type-${c.type2}">${type2Name}</span>` : ''}
+    </div>`;
+  card.addEventListener('click', () => openModal(c));
+  return card;
+}
+
+function renderGrid(filter) {
+  const grid = document.getElementById('creaturesGrid');
+  grid.innerHTML = '';
+  CREATURES
+    .filter(c => filter === 'all' || c.type1 === filter || c.type2 === filter)
+    .forEach(c => grid.appendChild(buildCard(c)));
+}
+
+renderGrid('all');
+
+document.getElementById('filterContainer').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderGrid(btn.dataset.filter);
+});
+
+function openModal(c) {
+  const maxStat = 220;
+  const name = LOCALE === 'en' ? c.nameEn : c.name;
+  const description = LOCALE === 'en' ? c.descriptionEn : c.description;
+  const type1Name = LOCALE === 'en' ? c.type1En : c.type1Pt;
+  const type2Name = LOCALE === 'en' ? c.type2En : c.type2Pt;
+  const numLabel = '#' + String(c.number).padStart(3,'0') + (c.complexTypeName ? ' ' + c.complexTypeName : '');
+  document.getElementById('modalNum').textContent = numLabel;
+  document.getElementById('modalName').textContent = name;
+  document.getElementById('modalDesc').textContent = description || I18N.modal.descriptionFallback;
+  document.getElementById('modalImg').src = `/assets/creatures/${c.emotion}-${c.stage}-art-front.png`;
+  document.getElementById('modalImg').alt = name;
+
+  const bar = document.getElementById('modalHeaderBar');
+  bar.style.background = TYPE_COLORS[c.type1] || '#77ae77';
+
+  const types = document.getElementById('modalTypes');
+  types.innerHTML = `<span class="type-badge type-${c.type1}">${type1Name}</span>${c.type2 ? `<span class="type-badge type-${c.type2}">${type2Name}</span>` : ''}`;
+
+
+
+  const hp  = Math.round(c.energy);
+  const atk = Math.round(c.attack);
+  const def = Math.round(c.defense);
+  const spd = Math.round(c.speed);
+
+  document.getElementById('valHp').textContent  = hp;
+  document.getElementById('valAtk').textContent = atk;
+  document.getElementById('valDef').textContent = def;
+  document.getElementById('valSpd').textContent = spd;
+
+  ['barHp','barAtk','barDef','barSpd'].forEach(id => document.getElementById(id).style.width = '0');
+  requestAnimationFrame(() => {
+    document.getElementById('barHp').style.width  = (hp  / maxStat * 100) + '%';
+    document.getElementById('barAtk').style.width = (atk / maxStat * 100) + '%';
+    document.getElementById('barDef').style.width = (def / maxStat * 100) + '%';
+    document.getElementById('barSpd').style.width = (spd / maxStat * 100) + '%';
+  });
+
+  document.getElementById('creatureModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('creatureModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('modalClose').addEventListener('click', closeModal);
+document.getElementById('creatureModal').addEventListener('click', e => {
+  if (e.target === document.getElementById('creatureModal')) closeModal();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ── EMULATOR ──
+async function openGame() {
+  const btn = document.getElementById('heroPlayBtn');
+  if (btn) { btn.disabled = true; btn.textContent = I18N.game.loadingButton; }
+  document.body.style.overflow = 'hidden';
+  document.querySelector('nav').style.display = 'none';
+  try {
+    await launchEmulator();
+  } catch (err) {
+    document.querySelector('nav').style.display = '';
+    document.body.style.overflow = '';
+    throw err;
+  } finally {
+    if (btn) { btn.disabled = false; btn.innerHTML = `<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M8 5v14l11-7z"/></svg> ${I18N.hero.playDemo}`; }
+  }
+}
+
+function requestCloseGame() {
+  shutdownEmulator();
+}
+
+function finalizeClose() {
+  document.getElementById('wishlistPrompt').style.display = 'none';
+  document.querySelector('nav').style.display = '';
+  document.body.style.overflow = '';
+}
+
+// Links antigos /?play=1 (ex-redirect do /game) agora vivem em /{locale}/play
+if (new URLSearchParams(window.location.search).has('play')) {
+  window.location.replace('/' + LOCALE + '/play');
+}
+</script>
