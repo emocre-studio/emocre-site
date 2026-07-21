@@ -97,4 +97,3 @@ Afonso França de Oliveira é desenvolvedor solo baseado no Brasil, com backgrou
 
 
 <div class="video-embed"><iframe src="https://www.youtube.com/embed/NWo2zawHuSI" frameborder="0" allowfullscreen></iframe></div>
-

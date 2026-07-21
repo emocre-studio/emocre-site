@@ -22,7 +22,7 @@ install/creatures:
 	cd vendor/emocre-art && git sparse-checkout set dist/sprites/creatures
 
 import:
-	IMPORT_DATA_DIR="$(PWD)/data" IMPORT_ENV_PATH="$(PWD)/.env" IMPORT_PRESSKIT_PATH="$(PWD)/press-kit.md" yarn workspace @emocre/tools import
+	IMPORT_DATA_DIR="$(PWD)/data" IMPORT_ENV_PATH="$(PWD)/.env" IMPORT_PRESSKIT_PATH="$(PWD)/pt/press-kit.md" yarn workspace @emocre/tools import
 
 transpile:
 	node -r ts-node/register tools/transpile.ts
