@@ -1106,7 +1106,7 @@ footer {
     justify-content: flex-end;
   }
 
-  nav .nav-demo-only { display: none; }
+  nav .nav-hide-mobile { display: none; }
 
   .demo-layout, .presskit-layout { grid-template-columns: 1fr; gap: 2.5rem; }
   .demo-screenshots { order: 2; }
