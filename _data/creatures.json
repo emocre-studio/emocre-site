@@ -46,7 +46,7 @@
 	{
 		"number": 3,
 		"name": "Coaxtase",
-		"nameEn": "Croakstase",
+		"nameEn": "Croakstasy",
 		"description": "Emana um canto harmonioso capaz de acalmar tempestades emocionais. Seu corpo vibra em sintonia com os sentimentos ao redor, transformando tristeza em luz.",
 		"descriptionEn": "Description: It emanates a harmonious song capable of calming emotional storms. Its body vibrates in harmony with the feelings around it, transforming sadness into light.",
 		"type1Pt": "Alegria",
@@ -112,7 +112,7 @@
 	{
 		"number": 6,
 		"name": "Ravalon",
-		"nameEn": "Furyborak (tom tribal)",
+		"nameEn": "Furyborak",
 		"description": "Imponente, concentra a ira em cada golpe. Um colosso tomado pela raiva, destrutivo e incansável.",
 		"descriptionEn": "Description: Imposing, it channels its rage into every strike. A colossus consumed by anger, destructive and relentless.",
 		"type1Pt": "Raiva",
@@ -266,7 +266,7 @@
 	{
 		"number": 13,
 		"name": "Crujá",
-		"nameEn": "Hootsy / Owlet",
+		"nameEn": "Hootsy",
 		"description": "Observa cuidadosamente o horizonte aguardando o que está por vir. Seu canto suave anuncia que algo novo está prestes a acontecer.",
 		"descriptionEn": "It carefully watches the horizon, waiting for what lies ahead. Its gentle hoot signals that something new is about to happen.",
 		"type1Pt": "Expectativa",
@@ -310,7 +310,7 @@
 	{
 		"number": 15,
 		"name": "Vigilanco",
-		"nameEn": "Watchowl / Owlert",
+		"nameEn": "Watchowl",
 		"description": "Nada abala sua atenção. No ápice da vigilância, observa tudo em silêncio e parece saber exatamente o que vai acontecer alguns minutos antes.",
 		"descriptionEn": "Nothing can shake its focus. At the peak of its vigilance, it watches everything in silence and always seems to know exactly what will happen a few minutes in advance.",
 		"type1Pt": "Expectativa",
@@ -594,6 +594,28 @@
 		"artPath": "creature/creatures/love/love-1-art-front.png"
 	},
 	{
+		"number": 42,
+		"name": "Aflordite",
+		"nameEn": "Flowerdite",
+		"description": "Onde passa, deixa um rastro de pequenos corações. Sua presença acalma quem está por perto: basta uma pétala entreaberta para transformar tristeza em ternura.",
+		"descriptionEn": "Onde passa, deixa um rastro de pequenos corações. Sua presença acalma quem está por perto: basta uma pétala entreaberta para transformar tristeza em ternura.",
+		"type1Pt": "Alegria",
+		"type2Pt": "Confiança",
+		"type1En": "Joy",
+		"type2En": "Trust",
+		"type1": "AL",
+		"type2": "CO",
+		"emotion": "love",
+		"emotionPt": "Amor",
+		"stage": "2",
+		"energy": 70.790790790791,
+		"attack": 98.898898898899,
+		"defense": 93.693693693694,
+		"speed": 83.283283283283,
+		"complexTypeName": "Amor",
+		"artPath": "creature/creatures/love/love-2-art-front.png"
+	},
+	{
 		"number": 45,
 		"name": "Mascarim",
 		"nameEn": "Masquerion",
@@ -728,7 +750,7 @@
 	{
 		"number": 89,
 		"name": "Remorcito",
-		"nameEn": "Remobat",
+		"nameEn": "Remorwing",
 		"description": "Habita cavernas úmidas e silenciosas, onde passa longas horas refletindo sobre seus próprios erros. Durante a noite, voa em círculos lentos, Como se estivesse preso ao peso do remorso que nunca o deixa descansar.",
 		"descriptionEn": "It inhabits damp, silent caves, where it spends long hours reflecting on its own mistakes. At night, it flies in slow circles, as though trapped by the weight of remorse that never lets it rest.",
 		"type1Pt": "Tristeza",
@@ -750,7 +772,7 @@
 	{
 		"number": 90,
 		"name": "Remorcego",
-		"nameEn": "Remorwing",
+		"nameEn": "Remobat",
 		"description": "Vive em cavernas úmidas e raramente consegue alçar voo, pois o peso do remorso é tão grande que suas asas apenas cobrem o rosto, numa tentativa de se esconder da luz que revela suas culpas.",
 		"descriptionEn": "It lives in damp caves and rarely manages to take flight, as the weight of remorse is so great that its wings do little more than cover its face, trying to hide from the light that reveals its guilt.",
 		"type1Pt": "Tristeza",
@@ -794,7 +816,7 @@
 	{
 		"number": 92,
 		"name": "Gorilado",
-		"nameEn": "Ragorilla / Furilla",
+		"nameEn": "Outragor",
 		"description": "Tende a ser pacífico, mas reage imediatamente a qualquer injustiça ao seu redor. Sua presença impõe respeito, e se transforma em fúria sempre que algo parece errado.",
 		"descriptionEn": "It is naturally peaceful but reacts immediately to any injustice around it. Its presence commands respect, transforming into fury whenever something feels wrong.",
 		"type1Pt": "Surpresa",
