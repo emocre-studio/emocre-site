@@ -695,7 +695,8 @@ function buildCard(c) {
   const card = document.createElement('div');
   card.className = 'creature-card';
   card.dataset.types = [c.type1, c.type2].filter(Boolean).join(',');
-  const numStr = '#' + String(c.number).padStart(3,'0') + (c.complexTypeName ? ' ' + c.complexTypeName : '');
+  const complexTypeName = LOCALE === 'en' ? c.complexTypeNameEn : c.complexTypeName;
+  const numStr = '#' + String(c.number).padStart(3,'0') + (complexTypeName ? ' ' + complexTypeName : '');
   const name = LOCALE === 'en' ? c.nameEn : c.name;
   const type1Name = LOCALE === 'en' ? c.type1En : c.type1Pt;
   const type2Name = LOCALE === 'en' ? c.type2En : c.type2Pt;
@@ -737,7 +738,8 @@ function openModal(c) {
   const description = LOCALE === 'en' ? c.descriptionEn : c.description;
   const type1Name = LOCALE === 'en' ? c.type1En : c.type1Pt;
   const type2Name = LOCALE === 'en' ? c.type2En : c.type2Pt;
-  const numLabel = '#' + String(c.number).padStart(3,'0') + (c.complexTypeName ? ' ' + c.complexTypeName : '');
+  const complexTypeName = LOCALE === 'en' ? c.complexTypeNameEn : c.complexTypeName;
+  const numLabel = '#' + String(c.number).padStart(3,'0') + (complexTypeName ? ' ' + complexTypeName : '');
   document.getElementById('modalNum').textContent = numLabel;
   document.getElementById('modalName').textContent = name;
   document.getElementById('modalDesc').textContent = description || I18N.modal.descriptionFallback;

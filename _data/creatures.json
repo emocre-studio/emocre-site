@@ -19,6 +19,7 @@
 		"defense": 59.607843137255,
 		"speed": 47.058823529412,
 		"complexTypeName": "Alegria",
+		"complexTypeNameEn": "Joy",
 		"artPath": "creature/creatures/joy/joy-1-art-front.png"
 	},
 	{
@@ -41,6 +42,7 @@
 		"defense": 67.844522968198,
 		"speed": 65.959952885748,
 		"complexTypeName": "Alegria",
+		"complexTypeNameEn": "Joy",
 		"artPath": "creature/creatures/joy/joy-2-art-front.png"
 	},
 	{
@@ -63,6 +65,7 @@
 		"defense": 89.550045913682,
 		"speed": 87.603305785124,
 		"complexTypeName": "Alegria",
+		"complexTypeNameEn": "Joy",
 		"artPath": "creature/creatures/joy/joy-3-art-front.png"
 	},
 	{
@@ -85,6 +88,7 @@
 		"defense": 48.438003220612,
 		"speed": 66.988727858293,
 		"complexTypeName": "Raiva",
+		"complexTypeNameEn": "Anger",
 		"artPath": "creature/creatures/anger/anger-1-art-front.png"
 	},
 	{
@@ -107,6 +111,7 @@
 		"defense": 60.78431372549,
 		"speed": 78.43137254902,
 		"complexTypeName": "Raiva",
+		"complexTypeNameEn": "Anger",
 		"artPath": "creature/creatures/anger/anger-2-art-front.png"
 	},
 	{
@@ -129,6 +134,7 @@
 		"defense": 81.157796451914,
 		"speed": 98.972922502334,
 		"complexTypeName": "Raiva",
+		"complexTypeNameEn": "Anger",
 		"artPath": "creature/creatures/anger/anger-3-art-front.png"
 	},
 	{
@@ -151,6 +157,7 @@
 		"defense": 68.988391376451,
 		"speed": 45.638474295191,
 		"complexTypeName": "Tristeza",
+		"complexTypeNameEn": "Sadness",
 		"artPath": "creature/creatures/sadness/sadness-1-art-front.png"
 	},
 	{
@@ -173,6 +180,7 @@
 		"defense": 81.736909323116,
 		"speed": 59.259259259259,
 		"complexTypeName": "Tristeza",
+		"complexTypeNameEn": "Sadness",
 		"artPath": "creature/creatures/sadness/sadness-2-art-front.png"
 	},
 	{
@@ -195,6 +203,7 @@
 		"defense": 105.794573643411,
 		"speed": 80.116279069767,
 		"complexTypeName": "Tristeza",
+		"complexTypeNameEn": "Sadness",
 		"artPath": "creature/creatures/sadness/sadness-3-art-front.png"
 	},
 	{
@@ -217,6 +226,7 @@
 		"defense": 42.666666666667,
 		"speed": 36.571428571429,
 		"complexTypeName": "Confiança",
+		"complexTypeNameEn": "Trust",
 		"artPath": "creature/creatures/trust/trust-1-art-front.png"
 	},
 	{
@@ -239,6 +249,7 @@
 		"defense": 39.111111111111,
 		"speed": 35.555555555556,
 		"complexTypeName": "Confiança",
+		"complexTypeNameEn": "Trust",
 		"artPath": "creature/creatures/trust/trust-2-art-front.png"
 	},
 	{
@@ -261,6 +272,7 @@
 		"defense": 60.547730829421,
 		"speed": 45.618153364632,
 		"complexTypeName": "Confiança",
+		"complexTypeNameEn": "Trust",
 		"artPath": "creature/creatures/trust/trust-3-art-front.png"
 	},
 	{
@@ -283,6 +295,7 @@
 		"defense": 52.244897959184,
 		"speed": 54.421768707483,
 		"complexTypeName": "Expectativa",
+		"complexTypeNameEn": "Anticipation",
 		"artPath": "creature/creatures/anticipation/anticipation-1-art-front.png"
 	},
 	{
@@ -305,6 +318,7 @@
 		"defense": 65.700483091788,
 		"speed": 67.632850241546,
 		"complexTypeName": "Expectativa",
+		"complexTypeNameEn": "Anticipation",
 		"artPath": "creature/creatures/anticipation/anticipation-2-art-front.png"
 	},
 	{
@@ -327,6 +341,7 @@
 		"defense": 89.706390328152,
 		"speed": 73.229706390328,
 		"complexTypeName": "Expectativa",
+		"complexTypeNameEn": "Anticipation",
 		"artPath": "creature/creatures/anticipation/anticipation-3-art-front.png"
 	},
 	{
@@ -349,6 +364,7 @@
 		"defense": 33.364928909953,
 		"speed": 80.88467614534,
 		"complexTypeName": "Medo",
+		"complexTypeNameEn": "Fear",
 		"artPath": "creature/creatures/fear/fear-1-art-front.png"
 	},
 	{
@@ -371,6 +387,7 @@
 		"defense": 48.840048840049,
 		"speed": 92.796092796093,
 		"complexTypeName": "Medo",
+		"complexTypeNameEn": "Fear",
 		"artPath": "creature/creatures/fear/fear-2-art-front.png"
 	},
 	{
@@ -393,6 +410,7 @@
 		"defense": 71.507936507936,
 		"speed": 115.674603174603,
 		"complexTypeName": "Medo",
+		"complexTypeNameEn": "Fear",
 		"artPath": "creature/creatures/fear/fear-3-art-front.png"
 	},
 	{
@@ -415,6 +433,7 @@
 		"defense": 64.646464646465,
 		"speed": 32.323232323232,
 		"complexTypeName": "Nojo",
+		"complexTypeNameEn": "Disgust",
 		"artPath": "creature/creatures/disgust/disgust-1-art-front.png"
 	},
 	{
@@ -437,6 +456,7 @@
 		"defense": 78.494623655914,
 		"speed": 43.010752688172,
 		"complexTypeName": "Nojo",
+		"complexTypeNameEn": "Disgust",
 		"artPath": "creature/creatures/disgust/disgust-2-art-front.png"
 	},
 	{
@@ -459,6 +479,7 @@
 		"defense": 100.952380952381,
 		"speed": 57.359307359307,
 		"complexTypeName": "Nojo",
+		"complexTypeNameEn": "Disgust",
 		"artPath": "creature/creatures/disgust/disgust-3-art-front.png"
 	},
 	{
@@ -481,6 +502,7 @@
 		"defense": 46.590038314176,
 		"speed": 68.659003831418,
 		"complexTypeName": "Surpresa",
+		"complexTypeNameEn": "Surprise",
 		"artPath": "creature/creatures/surprise/surprise-1-art-front.png"
 	},
 	{
@@ -503,6 +525,7 @@
 		"defense": 58.402203856749,
 		"speed": 78.236914600551,
 		"complexTypeName": "Surpresa",
+		"complexTypeNameEn": "Surprise",
 		"artPath": "creature/creatures/surprise/surprise-2-art-front.png"
 	},
 	{
@@ -525,6 +548,7 @@
 		"defense": 77.690763052209,
 		"speed": 107.489959839357,
 		"complexTypeName": "Surpresa",
+		"complexTypeNameEn": "Surprise",
 		"artPath": "creature/creatures/surprise/surprise-3-art-front.png"
 	},
 	{
@@ -547,6 +571,7 @@
 		"defense": 41.864139020537,
 		"speed": 11.848341232228,
 		"complexTypeName": "Distração",
+		"complexTypeNameEn": "Distraction",
 		"artPath": "creature/creatures/distraction/distraction-1-art-front.png"
 	},
 	{
@@ -569,6 +594,7 @@
 		"defense": 88.419913419914,
 		"speed": 27.922077922078,
 		"complexTypeName": "Distração",
+		"complexTypeNameEn": "Distraction",
 		"artPath": "creature/creatures/distraction/distraction-2-art-front.png"
 	},
 	{
@@ -591,6 +617,7 @@
 		"defense": 45.112781954887,
 		"speed": 60.15037593985,
 		"complexTypeName": "Amor",
+		"complexTypeNameEn": "Love",
 		"artPath": "creature/creatures/love/love-1-art-front.png"
 	},
 	{
@@ -613,6 +640,7 @@
 		"defense": 93.693693693694,
 		"speed": 83.283283283283,
 		"complexTypeName": "Amor",
+		"complexTypeNameEn": "Love",
 		"artPath": "creature/creatures/love/love-2-art-front.png"
 	},
 	{
@@ -635,6 +663,7 @@
 		"defense": 54.170854271357,
 		"speed": 39.396984924623,
 		"complexTypeName": "Culpa",
+		"complexTypeNameEn": "Guilt",
 		"artPath": "creature/creatures/guilt/guilt-1-art-front.png"
 	},
 	{
@@ -657,6 +686,7 @@
 		"defense": 95.075376884422,
 		"speed": 69.145728643216,
 		"complexTypeName": "Culpa",
+		"complexTypeNameEn": "Guilt",
 		"artPath": "creature/creatures/guilt/guilt-2-art-front.png"
 	},
 	{
@@ -679,6 +709,7 @@
 		"defense": 0,
 		"speed": 0,
 		"complexTypeName": "Encantamento",
+		"complexTypeNameEn": "Delight",
 		"artPath": "creature/creatures/delight/delight-1-art-front.png"
 	},
 	{
@@ -701,6 +732,7 @@
 		"defense": 0,
 		"speed": 0,
 		"complexTypeName": "Encantamento",
+		"complexTypeNameEn": "Delight",
 		"artPath": "creature/creatures/delight/delight-2-art-front.png"
 	},
 	{
@@ -723,6 +755,7 @@
 		"defense": 42.708333333333,
 		"speed": 26.041666666667,
 		"complexTypeName": "Vergonha",
+		"complexTypeNameEn": "Shame",
 		"artPath": "creature/creatures/shame/shame-1-art-front.png"
 	},
 	{
@@ -745,6 +778,7 @@
 		"defense": 51.71102661597,
 		"speed": 65.906210392903,
 		"complexTypeName": "Vergonha",
+		"complexTypeNameEn": "Shame",
 		"artPath": "creature/creatures/shame/shame-2-art-front.png"
 	},
 	{
@@ -767,6 +801,7 @@
 		"defense": 37.037037037037,
 		"speed": 53.606237816764,
 		"complexTypeName": "Remorso",
+		"complexTypeNameEn": "Remorse",
 		"artPath": "creature/creatures/remorse/remorse-1-art-front.png"
 	},
 	{
@@ -789,6 +824,7 @@
 		"defense": 58.994640943194,
 		"speed": 72.733118971061,
 		"complexTypeName": "Remorso",
+		"complexTypeNameEn": "Remorse",
 		"artPath": "creature/creatures/remorse/remorse-2-art-front.png"
 	},
 	{
@@ -811,6 +847,7 @@
 		"defense": 40.136054421769,
 		"speed": 40.816326530612,
 		"complexTypeName": "Indignação",
+		"complexTypeNameEn": "Outrage",
 		"artPath": "creature/creatures/outrage/outrage-1-art-front.png"
 	},
 	{
@@ -833,6 +870,7 @@
 		"defense": 94.59748427673,
 		"speed": 69.088050314465,
 		"complexTypeName": "Indignação",
+		"complexTypeNameEn": "Outrage",
 		"artPath": "creature/creatures/outrage/outrage-2-art-front.png"
 	}
 ]

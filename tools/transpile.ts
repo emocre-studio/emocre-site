@@ -24,6 +24,8 @@ async function emotionEnToEn(emotion: string, typesFile: string): Promise<string
     .whereArtFrontExists()
     .execute()
 
+  const complexTypes = await ComplexTypes.readFromFile(dataPath('type/types.yml'))
+
   function destinationCreatureImagePath(emotion: string, stage: number): string {
     return `${siteAssetsPath}/creatures/${emotion}-${stage}-art-front.png`
   }
@@ -52,6 +54,7 @@ async function emotionEnToEn(emotion: string, typesFile: string): Promise<string
         speed: c.speed,
 
         complexTypeName: c.complexTypeName,
+        complexTypeNameEn: c.complexTypeId ? (complexTypes.byId(c.complexTypeId)?.name_en ?? c.complexTypeName) : '',
         artPath: c.artFrontPath,
       }
     }))
