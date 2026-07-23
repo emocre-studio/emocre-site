@@ -35,7 +35,8 @@
   </a>
   <ul class="nav-links">
 
-    <li class="nav-hide-mobile"><a href="#demo" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('demo').offsetTop - 60, behavior: 'smooth'})">{{ i18n[locale].nav.demo }}</a></li>
+    {% comment %} Demo temporarily disabled — see home.html #demo section {% endcomment %}
+    {% comment %}<li class="nav-hide-mobile"><a href="#demo" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('demo').offsetTop - 60, behavior: 'smooth'})">{{ i18n[locale].nav.demo }}</a></li>{% endcomment %}
     <li class="nav-hide-mobile"><a href="#creatures" onclick="event.preventDefault(); window.scrollTo({top: document.getElementById('creatures').offsetTop - 60, behavior: 'smooth'})">{{ i18n[locale].nav.creatures }}</a></li>
     <li><a href="https://app.emocre.com/leaderboard">{{ i18n[locale].nav.ranking }}</a></li>
     <li><a href="/{{ locale }}/press-kit/">{{ i18n[locale].nav.pressKit }}</a></li>
