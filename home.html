@@ -399,8 +399,7 @@ eleventyComputed:
   </div>
 </section>
 
-<!-- ── DEMO (temporarily disabled) ── -->
-{% comment %}
+<!-- ── DEMO ── -->
 <section class="demo-section" id="demo">
   <div class="section-inner">
     <div class="demo-layout">
@@ -435,15 +434,17 @@ eleventyComputed:
             <span class="demo-spec-value">{{ i18n[locale].demo.specs.statusValue }}</span>
           </div>
         </div>
+        {% comment %} Demo button temporarily disabled {% endcomment %}
+        {% comment %}
         <button onclick="openGame()" class="btn btn-primary btn-lg">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
           {{ i18n[locale].demo.playDemo }}
         </button>
+        {% endcomment %}
       </div>
     </div>
   </div>
 </section>
-{% endcomment %}
 
 <!-- ── CREATURES ── -->
 <section class="creatures-section" id="creatures">
