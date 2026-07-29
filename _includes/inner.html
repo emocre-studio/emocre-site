@@ -35,7 +35,8 @@
   </a>
   <ul class="nav-links">
 
-    <li class="nav-hide-mobile"><a href="/{{ locale }}/#demo">{{ i18n[locale].nav.demo }}</a></li>
+    {% comment %} Demo temporarily disabled — see home.html #demo section {% endcomment %}
+    {% comment %}<li class="nav-hide-mobile"><a href="/{{ locale }}/#demo">{{ i18n[locale].nav.demo }}</a></li>{% endcomment %}
     <li class="nav-hide-mobile"><a href="/{{ locale }}/#creatures">{{ i18n[locale].nav.creatures }}</a></li>
     <li><a href="https://app.emocre.com/leaderboard">{{ i18n[locale].nav.ranking }}</a></li>
     <li><a href="/{{ locale }}/press-kit/">{{ i18n[locale].nav.pressKit }}</a></li>
