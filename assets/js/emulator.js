@@ -51,69 +51,6 @@ function applyDirKeys(keys) {
   activeDirKeys = keys;
 }
 
-// Controle físico via Gamepad API. O input driver do RetroArch no emscripten não
-// recebe o gamepad de forma confiável, então em vez de configurá-lo lemos os pads
-// aqui e traduzimos para os MESMOS KeyboardEvent sintéticos que o joypad de toque
-// dispara — caminho já comprovado até o emulador.
-//
-// Índices do mapeamento "standard" da Gamepad API: 0=baixo, 1=direita, 2=esquerda,
-// 3=topo, 9=start, 12..15=d-pad. Os três botões do Mega Drive ficam na linha
-// natural do polegar (baixo/direita/esquerda); o de cima repete o C para alcance.
-const GAMEPAD_BUTTON_KEYS = {
-  0: 'KeyA',       // A
-  1: 'KeyZ',       // B
-  2: 'KeyX',       // C
-  3: 'KeyX',       // C (botão de cima)
-  9: 'Enter',      // START
-  12: 'ArrowUp',
-  13: 'ArrowDown',
-  14: 'ArrowLeft',
-  15: 'ArrowRight',
-};
-// Analógico também anda: nem todo controle publica o d-pad em 12..15 (alguns o
-// entregam só como eixo), então lemos o stick esquerdo além dos botões.
-const GAMEPAD_AXIS_THRESHOLD = 0.5;
-
-let gamepadFrame = null;
-let gamepadKeys = new Set();
-
-function readGamepadKeys() {
-  const keys = new Set();
-  const pads = navigator.getGamepads ? navigator.getGamepads() : [];
-  for (const pad of pads) {
-    if (!pad) continue;
-    pad.buttons.forEach((button, i) => {
-      if (button.pressed && GAMEPAD_BUTTON_KEYS[i]) keys.add(GAMEPAD_BUTTON_KEYS[i]);
-    });
-    const x = pad.axes[0] ?? 0;
-    const y = pad.axes[1] ?? 0;
-    if (x <= -GAMEPAD_AXIS_THRESHOLD) keys.add('ArrowLeft');
-    if (x >= GAMEPAD_AXIS_THRESHOLD) keys.add('ArrowRight');
-    if (y <= -GAMEPAD_AXIS_THRESHOLD) keys.add('ArrowUp');
-    if (y >= GAMEPAD_AXIS_THRESHOLD) keys.add('ArrowDown');
-  }
-  return keys;
-}
-
-function pollGamepads() {
-  gamepadFrame = requestAnimationFrame(pollGamepads);
-  if (!nostalgistInstance) return;
-  const keys = readGamepadKeys();
-  gamepadKeys.forEach(key => { if (!keys.has(key)) simulateKey(key, 'keyup'); });
-  keys.forEach(key => { if (!gamepadKeys.has(key)) simulateKey(key, 'keydown'); });
-  gamepadKeys = keys;
-}
-
-function startGamepadPolling() {
-  if (gamepadFrame === null) pollGamepads();
-}
-
-function stopGamepadPolling() {
-  if (gamepadFrame !== null) { cancelAnimationFrame(gamepadFrame); gamepadFrame = null; }
-  gamepadKeys.forEach(key => simulateKey(key, 'keyup'));
-  gamepadKeys = new Set();
-}
-
 function setupJoystick() {
   const zone = document.getElementById('joystickZone');
   if (!zone || typeof nipplejs === 'undefined') return;
@@ -174,7 +111,6 @@ async function launchEmulator() {
   const joypad = document.getElementById('virtual-joypad');
   if (joypad) joypad.style.display = 'block';
   if (joypadJustCreated) setupJoystick();
-  startGamepadPolling();
 }
 
 // Encerra o emulador e abre o prompt de wishlist; cada página define
@@ -182,7 +118,6 @@ async function launchEmulator() {
 function shutdownEmulator() {
   if (demoTimer) { clearTimeout(demoTimer); demoTimer = null; }
   releaseDirKeys();
-  stopGamepadPolling();
   if (nostalgistInstance) { nostalgistInstance.exit(); nostalgistInstance = null; }
   document.getElementById('gameCloseBtn').style.display = 'none';
   document.getElementById('gameWishlistBtn').style.display = 'none';
