@@ -19,9 +19,13 @@ async function emotionEnToEn(emotion: string, typesFile: string): Promise<string
 
 (async () => {
   const repo = new CreaturesFileRepository(creaturesDir, artBase)
+  // Gateia pelo sprite CRT porque é o arquivo que a página realmente exibe
+  // (copiado de crtArtPathAbs logo abaixo). Gatear pelo front cru barrava
+  // criatura cujo master é só .ase — o CRT dela existe, mas o PNG exportado não,
+  // e ela sumia do compêndio por um arquivo que o site nem lê.
   const creatures = await repo
     .where(c => c.site)
-    .whereArtFrontExists()
+    .whereArtFrontCrtExists()
     .execute()
 
   const complexTypes = await ComplexTypes.readFromFile(dataPath('type/types.yml'))

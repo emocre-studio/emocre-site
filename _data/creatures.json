@@ -872,5 +872,28 @@
 		"complexTypeName": "Indignação",
 		"complexTypeNameEn": "Outrage",
 		"artPath": "creature/creatures/outrage/outrage-2-art-front.png"
+	},
+	{
+		"number": 105,
+		"name": "Saudalos",
+		"nameEn": "Saudalos",
+		"description": "Vagaroso pelas profundezas, seus olhos projetam uma luz trêmula que ilumina coisas que não existem mais.",
+		"descriptionEn": "Vagaroso pelas profundezas, seus olhos projetam uma luz trêmula que ilumina coisas que não existem mais.",
+		"type1Pt": "Tristeza",
+		"type2Pt": "Alegria",
+		"type1En": "Sadness",
+		"type2En": "Joy",
+		"type1": "TR",
+		"type2": "AL",
+		"emotion": "longing",
+		"emotionPt": "Saudade",
+		"stage": "1",
+		"energy": 0,
+		"attack": 0,
+		"defense": 0,
+		"speed": 0,
+		"complexTypeName": "Saudade",
+		"complexTypeNameEn": "Longing",
+		"artPath": "creature/creatures/longing/longing-1-art-front.png"
 	}
 ]
