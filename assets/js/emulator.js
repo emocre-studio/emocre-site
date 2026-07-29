@@ -1,8 +1,8 @@
 // Emulador compartilhado entre a home (overlay da demo) e a página /play.
 // Espera no DOM: #gameLoading, #gameCloseBtn, #gameWishlistBtn, #wishlistPrompt.
 // Depende dos globais Nostalgist, nipplejs e trackEvent.
-const EMULATOR_ROM_URL = 'https://emocre.com/assets/emocre-alpha-1.0.bin';
-const EMULATOR_ROM_ID = 'emocre-alpha-1.0';
+const EMULATOR_ROM_URL = 'https://emocre.com/assets/emocre-30.bin';
+const EMULATOR_ROM_ID = 'emocre-30';
 
 let nostalgistInstance = null;
 let demoTimer = null;
