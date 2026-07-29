@@ -36,9 +36,9 @@ Its stated inspirations are **Pokémon, Celeste, Inside Out, and Super Metroid**
 | Native Resolution       | 320 x 224 pixels                              |
 | Suggested Price         | TBD                                           |
 | Languages               | English · Portuguese (BR)                     |
-| Development Status      | ~15% (free demo available)                    |
+| Development Status      | ~30% (free demo available)                    |
 | Official Website        | [https://emocre.com](https://emocre.com/)     |
-| Number of Creatures     | 104                                           |
+| Number of Creatures     | More than 100                                         |
 
 
 ## Developer Quote

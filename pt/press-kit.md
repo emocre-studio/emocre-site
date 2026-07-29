@@ -36,9 +36,9 @@ As inspirações declaradas são **Pokémon, Celeste, Divertidamente e Super Met
 | Resolução Nativa          | 320 x 224 pixels                                      |
 | Preço Sugerido            | A definir                                             |
 | Idiomas                   | Português (BR) · Inglês                               |
-| Status de Desenvolvimento | ~15% (demo gratuita disponível)                       |
+| Status de Desenvolvimento | ~30% (demo gratuita disponível)                       |
 | Site Oficial              | [https://emocre.com](https://emocre.com/)             |
-| Número de Criaturas       | 104                                                   |
+| Número de Criaturas       | Mais de 100                                                 |
 
 
 ## Citação do Desenvolvedor

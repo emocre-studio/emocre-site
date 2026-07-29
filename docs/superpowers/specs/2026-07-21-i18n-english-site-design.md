@@ -67,7 +67,7 @@ Estrutura por seção de página, espelhando as seções existentes de `index.ht
   "hero": { "tagline": "...", "desc": "...", "playDemo": "Jogar a Demo", "wishlist": "Wishlist na Steam", "instagram": "Instagram" },
   "mythical": { "eventLabel": "Evento: Criatura Mítica", "exclusive": "Exclusivo", "tag": "CRIATURA MÍTICA", "level": "Nível", "cta": "..." },
   "demo": { "label": "Demo Gratuita", "title": "...", "body": "...", "specs": { "genre": "...", "platforms": "...", "resolution": "...", "status": "..." } },
-  "creatures": { "compendium": "Compêndio", "title": "Conheça as Criaturas", "filters": { "all": "Todos", "AL": "Alegria", "RA": "Raiva", "TR": "Tristeza", "CO": "Confiança", "EX": "Expectativa", "NO": "Nojo", "SU": "Surpresa", "ME": "Medo" }, "more": "Serão 104 Emocres — mais em breve..." },
+  "creatures": { "compendium": "Compêndio", "title": "Conheça as Criaturas", "filters": { "all": "Todos", "AL": "Alegria", "RA": "Raiva", "TR": "Tristeza", "CO": "Confiança", "EX": "Expectativa", "NO": "Nojo", "SU": "Surpresa", "ME": "Medo" }, "more": "Serão mais de 100 Emocres — mais em breve..." },
   "modal": { "type": "Tipo", "attributes": "Atributos", "energy": "Energia", "power": "Força", "defense": "Defesa", "speed": "Velocidade", "descriptionFallback": "Descrição em breve...", "close": "Fechar" },
   "pressKit": { "label": "Imprensa", "title": "Press Kit", "body": "...", "quote": "...", "cta": "Ver Press Kit Completo", "facts": { "developer": "Desenvolvedora", "genre": "Gênero", ... } },
   "footer": { "copy": "© 2026 Afonso França de Oliveira. Todos os direitos reservados." },

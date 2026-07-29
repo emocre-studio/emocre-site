@@ -186,7 +186,7 @@ This mirrors every hardcoded PT string currently in `index.html`, `play.html`,
       "resolutionLabel": "Resolução",
       "resolutionValue": "320 × 224 (nativa 16-bit)",
       "statusLabel": "Status",
-      "statusValue": "Em desenvolvimento (~15%)"
+      "statusValue": "Em desenvolvimento (~30%)"
     },
     "playDemo": "Jogar a Demo"
   },
@@ -204,7 +204,7 @@ This mirrors every hardcoded PT string currently in `index.html`, `play.html`,
       "SU": "Surpresa",
       "ME": "Medo"
     },
-    "more": "Serão 104 Emocres — mais em breve..."
+    "more": "Serão mais de 100 Emocres — mais em breve..."
   },
   "modal": {
     "close": "Fechar",
@@ -235,9 +235,9 @@ This mirrors every hardcoded PT string currently in `index.html`, `play.html`,
       "languagesLabel": "Idiomas",
       "languagesValue": "Português (BR) · Inglês",
       "statusLabel": "Status",
-      "statusValue": "Em desenvolvimento ~15%",
+      "statusValue": "Em desenvolvimento ~30%",
       "creaturesLabel": "Criaturas",
-      "creaturesValue": "104 Emocres planejados",
+      "creaturesValue": "Mais de 100 Emocres planejados",
       "inspirationsLabel": "Inspirações",
       "inspirationsValue": "Pokémon · Celeste · Divertidamente · Super Metroid",
       "contactLabel": "Contato"
@@ -306,7 +306,7 @@ English translation of every key above, same shape:
       "resolutionLabel": "Resolution",
       "resolutionValue": "320 × 224 (native 16-bit)",
       "statusLabel": "Status",
-      "statusValue": "In development (~15%)"
+      "statusValue": "In development (~30%)"
     },
     "playDemo": "Play the Demo"
   },
@@ -324,7 +324,7 @@ English translation of every key above, same shape:
       "SU": "Surprise",
       "ME": "Fear"
     },
-    "more": "104 Emocres are coming — more soon..."
+    "more": "More than 100 Emocres are coming — more soon..."
   },
   "modal": {
     "close": "Close",
@@ -355,9 +355,9 @@ English translation of every key above, same shape:
       "languagesLabel": "Languages",
       "languagesValue": "English · Portuguese (BR)",
       "statusLabel": "Status",
-      "statusValue": "In development ~15%",
+      "statusValue": "In development ~30%",
       "creaturesLabel": "Creatures",
-      "creaturesValue": "104 planned Emocres",
+      "creaturesValue": "More than 100 planned Emocres",
       "inspirationsLabel": "Inspirations",
       "inspirationsValue": "Pokémon · Celeste · Inside Out · Super Metroid",
       "contactLabel": "Contact"
@@ -561,11 +561,11 @@ Apply these replacements inside the body (exact old string → new Liquid expres
 | `Gênero` / `Monster Tamer / Metroidvania` | `{{ i18n[locale].demo.specs.genreLabel }}` / `{{ i18n[locale].demo.specs.genreValue }}` |
 | `Plataformas` / `Mega Drive · PC (Steam)` | `{{ i18n[locale].demo.specs.platformsLabel }}` / `{{ i18n[locale].demo.specs.platformsValue }}` |
 | `Resolução` / `320 × 224 (nativa 16-bit)` | `{{ i18n[locale].demo.specs.resolutionLabel }}` / `{{ i18n[locale].demo.specs.resolutionValue }}` |
-| `Status` / `Em desenvolvimento (~15%)` | `{{ i18n[locale].demo.specs.statusLabel }}` / `{{ i18n[locale].demo.specs.statusValue }}` |
+| `Status` / `Em desenvolvimento (~30%)` | `{{ i18n[locale].demo.specs.statusLabel }}` / `{{ i18n[locale].demo.specs.statusValue }}` |
 | `Compêndio` | `{{ i18n[locale].creatures.compendium }}` |
 | `Conheça as Criaturas` | `{{ i18n[locale].creatures.title }}` |
 | filter buttons `Todos`/`Alegria`/`Raiva`/`Tristeza`/`Confiança`/`Expectativa`/`Nojo`/`Surpresa`/`Medo` | `{{ i18n[locale].creatures.filters.all }}` / `.AL` / `.RA` / `.TR` / `.CO` / `.EX` / `.NO` / `.SU` / `.ME` respectively (keep `data-filter="AL"` etc unchanged — those are JS hooks, not copy) |
-| `Serão 104 Emocres — mais em breve...` | `{{ i18n[locale].creatures.more }}` |
+| `Serão mais de 100 Emocres — mais em breve...` | `{{ i18n[locale].creatures.more }}` |
 | `Fechar` (modal close aria-label) | `{{ i18n[locale].modal.close }}` |
 | `Tipo` (modal meta label) | `{{ i18n[locale].modal.type }}` |
 | `Atributos` | `{{ i18n[locale].modal.attributes }}` |

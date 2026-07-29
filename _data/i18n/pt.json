@@ -48,7 +48,7 @@
       "resolutionLabel": "Resolução",
       "resolutionValue": "320 × 224 (nativa 16-bit)",
       "statusLabel": "Status",
-      "statusValue": "Em desenvolvimento (~15%)"
+      "statusValue": "Em desenvolvimento (~30%)"
     },
     "playDemo": "Jogar a Demo"
   },
@@ -66,7 +66,7 @@
       "SU": "Surpresa",
       "ME": "Medo"
     },
-    "more": "Serão 104 Emocres — mais em breve..."
+    "more": "Serão mais de 100 Emocres — mais em breve..."
   },
   "modal": {
     "close": "Fechar",
@@ -97,9 +97,9 @@
       "languagesLabel": "Idiomas",
       "languagesValue": "Português (BR) · Inglês",
       "statusLabel": "Status",
-      "statusValue": "Em desenvolvimento ~15%",
+      "statusValue": "Em desenvolvimento ~30%",
       "creaturesLabel": "Criaturas",
-      "creaturesValue": "104 Emocres planejados",
+      "creaturesValue": "Mais de 100 Emocres planejados",
       "inspirationsLabel": "Inspirações",
       "inspirationsValue": "Pokémon · Celeste · Divertidamente · Super Metroid",
       "contactLabel": "Contato"

@@ -48,7 +48,7 @@
       "resolutionLabel": "Resolution",
       "resolutionValue": "320 × 224 (native 16-bit)",
       "statusLabel": "Status",
-      "statusValue": "In development (~15%)"
+      "statusValue": "In development (~30%)"
     },
     "playDemo": "Play the Demo"
   },
@@ -66,7 +66,7 @@
       "SU": "Surprise",
       "ME": "Fear"
     },
-    "more": "104 Emocres are coming — more soon..."
+    "more": "More than 100 Emocres are coming — more soon..."
   },
   "modal": {
     "close": "Close",
@@ -97,9 +97,9 @@
       "languagesLabel": "Languages",
       "languagesValue": "English · Portuguese (BR)",
       "statusLabel": "Status",
-      "statusValue": "In development ~15%",
+      "statusValue": "In development ~30%",
       "creaturesLabel": "Creatures",
-      "creaturesValue": "104 planned Emocres",
+      "creaturesValue": "More than 100 planned Emocres",
       "inspirationsLabel": "Inspirations",
       "inspirationsValue": "Pokémon · Celeste · Inside Out · Super Metroid",
       "contactLabel": "Contact"
